@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Classes\commnication">
+      <UniqueIdentifier>{c826ec03-be7b-487e-ba8e-56cbf21ed8ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\core">
+      <UniqueIdentifier>{ca4be29c-4cae-403e-83ca-ce2fe9721a62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\helper">
+      <UniqueIdentifier>{11a89556-1dbc-4dc3-9f0a-7c8e7e1f7432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\server">
+      <UniqueIdentifier>{e008c5de-9f26-4623-9833-47640fc3c31c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resouces">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Classes\log">
+      <UniqueIdentifier>{13ae40b2-9106-4e8e-9212-98765b2103f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\common">
+      <UniqueIdentifier>{2d32c062-f59c-4093-8f3f-16dce12cb8a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\common\DataModel">
+      <UniqueIdentifier>{918b406d-e2ce-4852-a415-1c93695c6a39}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Classes\core\KxMemPool.cpp">
+      <Filter>Classes\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\core\KxObject.cpp">
+      <Filter>Classes\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\helper\BufferData.cpp">
+      <Filter>Classes\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\helper\GameModule.cpp">
+      <Filter>Classes\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\helper\GameNetworkNode.cpp">
+      <Filter>Classes\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\helper\KxTimerManager.cpp">
+      <Filter>Classes\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\server\KxBaseServer.cpp">
+      <Filter>Classes\server</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\server\ServerConfig.cpp">
+      <Filter>Classes\server</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\commnication\KxBufferList.cpp">
+      <Filter>Classes\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\commnication\KxEpoller.cpp">
+      <Filter>Classes\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\commnication\KxSelectPoller.cpp">
+      <Filter>Classes\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\commnication\KxSock.cpp">
+      <Filter>Classes\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\commnication\KxTCPClienter.cpp">
+      <Filter>Classes\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\commnication\KxTCPConnector.cpp">
+      <Filter>Classes\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\commnication\KxTCPListener.cpp">
+      <Filter>Classes\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\commnication\KxTCPUnit.cpp">
+      <Filter>Classes\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\commnication\KxUDPUnit.cpp">
+      <Filter>Classes\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\helper\CsvLoader.cpp">
+      <Filter>Classes\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\log\LogManager_s.cpp">
+      <Filter>Classes\log</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\log\LogFileHandler_s.cpp">
+      <Filter>Classes\log</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\log\LogConsoleHandler_s.cpp">
+      <Filter>Classes\log</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\helper\IDBModel.cpp">
+      <Filter>Classes\helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\common\DataModel\UserModel.cpp">
+      <Filter>Classes\common\DataModel</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\common\GameUser.cpp">
+      <Filter>Classes\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\common\GameUserManager.cpp">
+      <Filter>Classes\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Classes\KXServer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\core\KxCore.h">
+      <Filter>Classes\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\core\KxMemPool.h">
+      <Filter>Classes\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\core\KxObject.h">
+      <Filter>Classes\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\core\KxPlatform.h">
+      <Filter>Classes\core</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\BaseModule.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\BufferData.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\BufferTool.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\GameModule.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\GameNetworkNode.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\KxTimerCallback.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\KxTimerManager.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\KxTimeVal.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\server\KxBaseServer.h">
+      <Filter>Classes\server</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\server\KxCSComm.h">
+      <Filter>Classes\server</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\server\Protocol.h">
+      <Filter>Classes\server</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\server\ServerConfig.h">
+      <Filter>Classes\server</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxBufferList.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxCommInterfaces.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxEpoller.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxSelectPoller.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxSock.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxTCPClienter.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxTCPConnector.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxTCPListener.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxTCPUnit.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\commnication\KxUDPUnit.h">
+      <Filter>Classes\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\CsvLoader.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\log\LogManager_s.h">
+      <Filter>Classes\log</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\log\LogFileHandler_s.h">
+      <Filter>Classes\log</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\log\LogConsoleHandler_s.h">
+      <Filter>Classes\log</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\IDBModel.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\helper\ModelDef.h">
+      <Filter>Classes\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\common\DataModel\UserModel.h">
+      <Filter>Classes\common\DataModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\common\GameUser.h">
+      <Filter>Classes\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\common\GameUserManager.h">
+      <Filter>Classes\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
