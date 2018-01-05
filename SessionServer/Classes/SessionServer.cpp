@@ -79,7 +79,8 @@ bool SessionServer::onServerInit()
         return false;
     }
 	m_ServerData = m_ServerConfig.getServerDataByName("SessionServer");
-
+	m_ServerData.ip = "192.168.235.1";
+	m_ServerData.port = 12345;
 	char *ip = NULL;
 	if (m_ServerData.ip != "0" && m_ServerData.ip != "")
 	{
