@@ -1,8 +1,3 @@
 服务器组ID,服务器ID,Port,IP地址,服务器名
 99,99,8888,127.0.0.1,SessionServer
 1,1,6667,127.0.0.1,LoginServer
-2,2,6668,127.0.0.1,ServiceServer
-3,3,6669,127.0.0.1,BattleServer
-4,4,6670,127.0.0.1,MatchServer
-5,5,6671,127.0.0.1,UnionServer
-6,6,6672,127.0.0.1,RankServer

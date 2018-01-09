@@ -79,8 +79,8 @@ bool SessionServer::onServerInit()
         return false;
     }
 	m_ServerData = m_ServerConfig.getServerDataByName("SessionServer");
-	m_ServerData.ip = "192.168.235.1";
-	m_ServerData.port = 12345;
+	//m_ServerData.ip = "192.168.235.1";
+	//m_ServerData.port = 12345;
 	char *ip = NULL;
 	if (m_ServerData.ip != "0" && m_ServerData.ip != "")
 	{
@@ -113,7 +113,7 @@ bool SessionServer::onServerInit()
 			KX_LOGERROR("SessionServer Connect to Server Failed!");
 			return false;
 		}
-		KX_LOGDEBUG("======>>>>>>SessionServer Connect to Server: IP=%s, Port=%d \n", iter->second.ip.c_str(), iter->second.port);
+		KX_LOGDEBUG("======>>>>>>SessionServer Connect to Server %s: IP=%s, Port=%d \n", iter->second.name.c_str(), iter->second.ip.c_str(), iter->second.port);
 		pConnector->setModule(pConnectModule);
 		m_Poller->addCommObject(pConnector, pConnector->getPollType());
 		NetWorkManager::getInstance()->addServer(iter->second.serverId, pConnector);

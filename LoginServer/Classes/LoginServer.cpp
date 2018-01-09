@@ -96,6 +96,7 @@ bool LoginServer::onServerInit()
 
 	
 	// 初始化数据库
+	//这里好奇怪,一定要开redis再跑啊 不然错误在哪都不知道
 	if (!DBManager::getInstance()->InitWithXML(STORAGE_XML_FILE))
 	{
 		return false;

@@ -1,0 +1,12 @@
+
+*.obj
+*.log
+*.tlog
+*.idb
+*.pdb
+*.exe
+*.opensdf
+*.sdf
+*.ilk
+bin/MingTool.lib
+bin/ServerFrame.lib
