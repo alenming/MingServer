@@ -114,7 +114,6 @@ int KxSock::listen(int maxListenQueue)
 
 int KxSock::connect(const char* addr, int port)
 {
-    KX_LOGDEBUG("debug: KxSock::connect %s : %d socket %d", addr, port, m_Sock);
 	sockaddr_in name;
 	sockInitAddr(name, port, addr);
     return ::connect(m_Sock, (sockaddr*)&name, sizeof(sockaddr));
@@ -139,7 +138,7 @@ KXCOMMID KxSock::accept()
     KXCOMMID ret = ::accept(m_Sock, (sockaddr*)&name, (kxSockLen*)&len);
     if (ret != KXINVALID_COMMID)
     {
-       KX_LOGDEBUG("debug: KxSock::accept ip %s prot %d socketId %d", inet_ntoa(name.sin_addr), name.sin_port, ret);
+       //KX_LOGDEBUG("debug: KxSock::accept ip %s prot %d socketId %d", inet_ntoa(name.sin_addr), name.sin_port, ret);
     }
     else
     {

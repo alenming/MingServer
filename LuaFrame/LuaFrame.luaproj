@@ -95,6 +95,7 @@
     <Folder Include="app\Total\view\lobby\userCenter\" />
     <Folder Include="app\Total\view\scenes\" />
     <Folder Include="app\Updater\" />
+    <Folder Include="config\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="app\Chess\landlords\src\classicland\contorller\DingDianSaiRoomController.lua" />

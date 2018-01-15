@@ -69,6 +69,7 @@ protected:
 	int				m_ServerID;
 	int				m_Tick;
     static KxBaseServer* m_Server;
+	std::string		m_ServerName;
 };
 
 #endif

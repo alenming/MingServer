@@ -4,11 +4,7 @@
 #include "KxPlatform.h"
 #include "LoginSessionModule.h"
 
-#include "log/LogManager_s.h"
-#include "log/LogFileHandler_s.h"
-#include "log/LogConsoleHandler_s.h"
 #include "common/GameUserManager.h"
-
 #include "DBDriver/DBManager.h"
 
 using namespace std;
@@ -48,17 +44,10 @@ void LoginServer::destroy()
 
 bool LoginServer::onServerInit()
 {
-	KX_LOGDEBUG("==================================================");
+	this->m_ServerName = "LoginServer";
 	KxBaseServer::onServerInit();
-
-	LogManager_s::getInstance()->setShowTime(true);
-	LogManager_s::getInstance()->setShowDate(true);
-	LogManager_s::getInstance()->addHandler(1, new LogConsoleHandler_s());
-	LogFileHandler_s* pFileHandle = new LogFileHandler_s();
-	pFileHandle->setFilePath("../../bin/");
-	pFileHandle->setFileName("LoginServerOut");
-	pFileHandle->setFastModel(false);
-	LogManager_s::getInstance()->addHandler(2, pFileHandle);
+	
+	KX_LOGDEBUG("==================================================");
 
 	//1.初始化轮询器
 #if(KX_TARGET_PLATFORM == KX_PLATFORM_LINUX)
@@ -67,13 +56,12 @@ bool LoginServer::onServerInit()
 	m_Poller = new KxSelectPoller();
 #endif
 
-
     LoginListener* listener = new LoginListener();
 	if (!listener->init())
     {
         return false;
     }
-	m_ServerData = m_ServerConfig.getServerDataByName("LoginServer");
+	m_ServerData = m_ServerConfig.getServerDataByName(this->m_ServerName);
 
 	char *ip = NULL;
 	if (m_ServerData.ip != "0" && m_ServerData.ip != "")
@@ -82,18 +70,20 @@ bool LoginServer::onServerInit()
 	}
 	if (!listener->listen(m_ServerData.port, ip))
 	{
+		KX_LOGDEBUG("LoginServer listen IP=%s Port=%d Failed!", m_ServerData.ip.c_str(), m_ServerData.port);
 		return false;
+	}
+	else
+	{
+		KX_LOGDEBUG("LoginServer listen IP=%s Port=%d Successful!", m_ServerData.ip.c_str(), m_ServerData.port);
 	}
 
 	LoginSessionModule *pClientModel = new LoginSessionModule();
 	listener->setClientModule(pClientModel);
     m_Poller->addCommObject(listener, listener->getPollType());
-	KX_LOGDEBUG("===> LoginServer Launching IP=%s Port=%d", m_ServerData.ip.c_str(), m_ServerData.port);
-
+	
 	KXSAFE_RELEASE(listener);
 	KXSAFE_RELEASE(pClientModel);
-
-
 	
 	// 初始化数据库
 	//这里好奇怪,一定要开redis再跑啊 不然错误在哪都不知道

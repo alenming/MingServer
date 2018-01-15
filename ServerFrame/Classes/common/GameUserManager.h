@@ -1,6 +1,8 @@
 #ifndef __GAMEUSER_MANAGER_H__
 #define __GAMEUSER_MANAGER_H__
-
+/*
+	玩家模型管理器
+*/
 #include <map>
 #include "GameUser.h"
 #include "KXServer.h"

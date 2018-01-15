@@ -4,6 +4,8 @@
 #include "KxMemPool.h"
 #include <signal.h>
 #include "LogManager_s.h"
+#include "LogFileHandler_s.h"
+#include "LogConsoleHandler_s.h"
 
 #if KX_TARGET_PLATFORM == KX_PLATFORM_WIN32
     bool ctrlhandler(DWORD ev)
@@ -49,6 +51,7 @@ KxBaseServer::KxBaseServer()
 : m_Poller(NULL)
 , m_TimerMgr(NULL)
 , m_IsRunning(false)
+, m_ServerName("KxBaseServer")
 {
     m_Server = this;
 	m_Tick = 0;
@@ -129,6 +132,15 @@ bool KxBaseServer::onServerInit()
     {
         m_TimerMgr = new KxTimerManager();
     }
+
+	LogManager_s::getInstance()->setShowTime(true);
+	LogManager_s::getInstance()->setShowDate(true);
+	LogManager_s::getInstance()->addHandler(1, new LogConsoleHandler_s());
+	LogFileHandler_s* pFileHandle = new LogFileHandler_s();
+	pFileHandle->setFilePath("../bin/");
+	pFileHandle->setFileName(m_ServerName);
+	pFileHandle->setFastModel(false);
+	LogManager_s::getInstance()->addHandler(2, pFileHandle);
 
 	return true;
 }

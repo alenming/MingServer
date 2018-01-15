@@ -53,17 +53,9 @@ void SessionServer::destroy()
 
 bool SessionServer::onServerInit()
 {
-	KX_LOGDEBUG("==================================================");
+	this->m_ServerName = "SessionServer";
 	KxBaseServer::onServerInit();
-
-	LogManager_s::getInstance()->setShowTime(true);
-	LogManager_s::getInstance()->setShowDate(true);
-	LogManager_s::getInstance()->addHandler(1, new LogConsoleHandler_s());
-	LogFileHandler_s* pFileHandle = new LogFileHandler_s();
-	pFileHandle->setFilePath("../bin/");
-	pFileHandle->setFileName("SessionServerOut");
-	pFileHandle->setFastModel(false);
-	LogManager_s::getInstance()->addHandler(2, pFileHandle);
+	KX_LOGDEBUG("==================================================");
 
 	//1.³õÊ¼»¯ÂÖÑ¯Æ÷
 #if(KX_TARGET_PLATFORM == KX_PLATFORM_LINUX)
@@ -72,13 +64,12 @@ bool SessionServer::onServerInit()
 	m_Poller = new KxSelectPoller();
 #endif
 
-
     SessionListener* listener = new SessionListener();
 	if (!listener->init())
     {
         return false;
     }
-	m_ServerData = m_ServerConfig.getServerDataByName("SessionServer");
+	m_ServerData = m_ServerConfig.getServerDataByName(this->m_ServerName);
 	//m_ServerData.ip = "192.168.235.1";
 	//m_ServerData.port = 12345;
 	char *ip = NULL;
@@ -94,7 +85,8 @@ bool SessionServer::onServerInit()
 	ClientModule *pClientModel = new ClientModule();
 	listener->setClientModule(pClientModel);
     m_Poller->addCommObject(listener, listener->getPollType());
-	KX_LOGDEBUG("SessionServer Launching IP=%s Port=%d \n\n", m_ServerData.ip.c_str(), m_ServerData.port);
+
+	KX_LOGDEBUG("SessionServer Launching IP=%s Port=%d \n", m_ServerData.ip.c_str(), m_ServerData.port);
 
 	ConnectModule *pConnectModule = new ConnectModule();
 	ConnectEvent *pGameEvent = new ConnectEvent();
@@ -103,17 +95,21 @@ bool SessionServer::onServerInit()
 	std::map<int, ServerData> alldaata = m_ServerConfig.getServerData();
 	for (std::map<int, ServerData>::iterator iter = alldaata.begin(); iter != alldaata.end(); ++iter)
 	{
-		if (iter->second.name == "SessionServer")
+		if (iter->second.name == this->m_ServerName)
 		{
 			break;
 		}
 		SessionConnector *pConnector = new SessionConnector();
 		if (!pConnector->init() || !pConnector->connect((char *)iter->second.ip.c_str(), iter->second.port, iter->second.serverId, true))
 		{
-			KX_LOGERROR("SessionServer Connect to Server Failed!");
+			KX_LOGERROR("SessionServer Connect to Server %s: IP=%s, Port=%d Failed!", iter->second.name.c_str(), iter->second.ip.c_str(), iter->second.port);
 			return false;
 		}
-		KX_LOGDEBUG("======>>>>>>SessionServer Connect to Server %s: IP=%s, Port=%d \n", iter->second.name.c_str(), iter->second.ip.c_str(), iter->second.port);
+		else
+		{
+			KX_LOGDEBUG("SessionServer Connect to Server %s: IP=%s, Port=%d Susessful!", iter->second.name.c_str(), iter->second.ip.c_str(), iter->second.port);
+		}
+		
 		pConnector->setModule(pConnectModule);
 		m_Poller->addCommObject(pConnector, pConnector->getPollType());
 		NetWorkManager::getInstance()->addServer(iter->second.serverId, pConnector);

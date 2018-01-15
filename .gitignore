@@ -10,3 +10,8 @@
 *.ilk
 bin/MingTool.lib
 bin/ServerFrame.lib
+.svn/entries
+.svn/format
+.svn/wc.db-journal
+.svn/wc.db
+*.svn-base

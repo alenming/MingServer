@@ -133,11 +133,6 @@
     <ClInclude Include="Classes\server\Protocol.h" />
     <ClInclude Include="Classes\server\ServerConfig.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MingTool\MingTool.vcxproj">
-      <Project>{f5905944-3348-4629-81e3-6dd8a58ffc07}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

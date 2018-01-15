@@ -366,7 +366,7 @@ bool KxTimerManager::attachToFixList(KxTimerObject* obj)
     if (targetList->pushBack(obj))
     {
         obj->start(m_Now);
-        KX_LOGDEBUG("attachToFixList time tick on %d %d", obj->getTimeVal().tv_sec, obj->getTimeVal().tv_usec);
+        //KX_LOGDEBUG("attachToFixList time tick on %d %d", obj->getTimeVal().tv_sec, obj->getTimeVal().tv_usec);
         return true;
     }
 

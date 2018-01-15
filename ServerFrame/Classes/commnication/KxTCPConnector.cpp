@@ -36,7 +36,7 @@ bool KxTCPConnector::connect(const char* addr, int port, bool nonblock)
         {
             m_IsConnecting = true;
             changePollType(KXPOLLTYPE_OUT);
-			KX_LOGDEBUG("warn: socket %d KxTCPConnector::connect m_PollType %d", getCommId(), m_PollType);
+			//KX_LOGDEBUG("warn: socket %d KxTCPConnector::connect m_PollType %d", getCommId(), m_PollType);
             return true;
         }
         onConnected(false);
