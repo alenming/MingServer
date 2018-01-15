@@ -53,7 +53,6 @@ void SessionServer::destroy()
 
 bool SessionServer::onServerInit()
 {
-	this->m_ServerName = "SessionServer";
 	KxBaseServer::onServerInit();
 	KX_LOGDEBUG("==================================================");
 
@@ -69,7 +68,7 @@ bool SessionServer::onServerInit()
     {
         return false;
     }
-	m_ServerData = m_ServerConfig.getServerDataByName(this->m_ServerName);
+	
 	//m_ServerData.ip = "192.168.235.1";
 	//m_ServerData.port = 12345;
 	char *ip = NULL;
@@ -95,9 +94,9 @@ bool SessionServer::onServerInit()
 	std::map<int, ServerData> alldaata = m_ServerConfig.getServerData();
 	for (std::map<int, ServerData>::iterator iter = alldaata.begin(); iter != alldaata.end(); ++iter)
 	{
-		if (iter->second.name == this->m_ServerName)
+		if (iter->second.name == this->getServerName())
 		{
-			break;
+			continue;
 		}
 		SessionConnector *pConnector = new SessionConnector();
 		if (!pConnector->init() || !pConnector->connect((char *)iter->second.ip.c_str(), iter->second.port, iter->second.serverId, true))
@@ -130,6 +129,9 @@ bool SessionServer::initServerInfo()
 	{
 		return false;
 	}
+	this->setServerName(SERVER_NAME_SESSION);
+	m_ServerData = m_ServerConfig.getServerDataByName(this->getServerName());
+
 	return true;
 }
 

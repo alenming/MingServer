@@ -129,7 +129,6 @@
     <ClInclude Include="Classes\log\LogFileHandler_s.h" />
     <ClInclude Include="Classes\log\LogManager_s.h" />
     <ClInclude Include="Classes\server\KxBaseServer.h" />
-    <ClInclude Include="Classes\server\KxCSComm.h" />
     <ClInclude Include="Classes\server\Protocol.h" />
     <ClInclude Include="Classes\server\ServerConfig.h" />
   </ItemGroup>

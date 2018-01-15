@@ -10,6 +10,9 @@
 #include <map>
 #include <string>
 
+#define  SERVER_NAME_SESSION		"SessionServer"
+#define  SERVER_NAME_LOGIN			"LoginServer"
+
 struct ServerData
 {
 	int groupId;

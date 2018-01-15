@@ -44,7 +44,7 @@ void LoginServer::destroy()
 
 bool LoginServer::onServerInit()
 {
-	this->m_ServerName = "LoginServer";
+	this->setServerName("LoginServer");
 	KxBaseServer::onServerInit();
 	
 	KX_LOGDEBUG("==================================================");
@@ -61,7 +61,7 @@ bool LoginServer::onServerInit()
     {
         return false;
     }
-	m_ServerData = m_ServerConfig.getServerDataByName(this->m_ServerName);
+	m_ServerData = m_ServerConfig.getServerDataByName(this->getServerName());
 
 	char *ip = NULL;
 	if (m_ServerData.ip != "0" && m_ServerData.ip != "")
@@ -123,5 +123,7 @@ bool LoginServer::initServerInfo()
 	{
 		return false;
 	}
+	this->setServerName(SERVER_NAME_LOGIN);
+	m_ServerData = m_ServerConfig.getServerDataByName(this->getServerName());
 	return true;
 }

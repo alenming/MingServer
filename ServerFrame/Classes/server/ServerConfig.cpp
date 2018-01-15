@@ -64,7 +64,6 @@ bool ServerConfig::loadServerData()
 			sd.name = name;
 			m_ServerData[serverId] = sd;
 		}
-
 	}
 	return true;
 }

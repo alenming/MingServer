@@ -151,9 +151,6 @@
     <ClInclude Include="Classes\server\KxBaseServer.h">
       <Filter>Classes\server</Filter>
     </ClInclude>
-    <ClInclude Include="Classes\server\KxCSComm.h">
-      <Filter>Classes\server</Filter>
-    </ClInclude>
     <ClInclude Include="Classes\server\Protocol.h">
       <Filter>Classes\server</Filter>
     </ClInclude>

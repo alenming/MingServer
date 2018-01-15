@@ -2,7 +2,7 @@
 #include "Protocol.h"
 #include "KXServer.h"
 
-using namespace std;
+GateManager* GateManager::m_Instance = NULL;
 
 GateManager::GateManager(void)
 : m_Gate(NULL)
@@ -13,7 +13,7 @@ GateManager::~GateManager(void)
 {
 }
 
-GateManager* GateManager::m_Instance = NULL;
+
 GateManager* GateManager::getInstance()
 {
     if(NULL == m_Instance)

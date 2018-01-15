@@ -62,6 +62,9 @@ public:
 
 	int  GetServerID() { return m_ServerID; }
 
+	virtual void setServerName(std::string serverName) { m_ServerName = serverName; }
+	std::string getServerName() const { return m_ServerName; }
+
 protected:
 	IKxCommPoller*	m_Poller;
     KxTimerManager* m_TimerMgr;

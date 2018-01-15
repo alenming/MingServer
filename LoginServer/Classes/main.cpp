@@ -11,14 +11,6 @@
 #include "KXServer.h"
 #include "LoginServer.h"
 
-/* 选项:
-	-g	组
-	-si 服务器id
-	-ip 绑定的ip地址
-	-p 绑定端口
-	-sg 服务器类型
-	-sc 服务器个数
-*/
 
 int main(int argc, char ** argv) 
 {

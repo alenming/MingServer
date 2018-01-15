@@ -23,7 +23,6 @@ BufferData* newBufferData(int mainCMD, int subCmd)
 
 int deleteBufferData(BufferData* buffer)
 {
-
 	if (NULL != buffer)
 	{
 		delete buffer;

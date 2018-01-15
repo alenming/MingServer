@@ -1,6 +1,5 @@
 /*
 * 通讯协议 主要定义主命令和包头
-*
 */
 
 #ifndef __PROTOCOL_H__
@@ -27,11 +26,6 @@ struct LOGIN_DATA
 {
 	int accountId;
 	int passwd;
-	LOGIN_DATA():
-	accountId(0),passwd(0)
-	{
-		
-	};
 };
 
 inline int MakeCommand(int main, int sub)

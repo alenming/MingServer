@@ -1,6 +1,5 @@
 /*
  * 入口管理器，用于管理唯一的Session入口
-
  */
 
 #ifndef __GATE_MANAGER_H__
