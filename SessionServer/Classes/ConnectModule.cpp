@@ -24,13 +24,10 @@ bool ConnectModule::init(IGameEvent *pSink)
 void ConnectModule::processLogic(char* buffer, unsigned int len, IKxComm *target)
 {
     // 发给指定的前端
-
 	Head* head = reinterpret_cast<Head*>(buffer);
 	int nMainCmd = head->MainCommand();
 	int nSubCmd = head->SubCommand();
 	int uid = head->uid;
-	//LOGIN_DATA* a = reinterpret_cast<LOGIN_DATA*>(head->data());
-
 
 	SessionClient* pClient = reinterpret_cast<SessionClient*>(NetWorkManager::getInstance()->getGuest(uid));
 
@@ -39,7 +36,6 @@ void ConnectModule::processLogic(char* buffer, unsigned int len, IKxComm *target
 		return;
 	}
 	pClient->sendData(buffer, head->length);
-
 }
 
 void ConnectModule::processError(IKxComm *target)

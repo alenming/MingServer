@@ -4,6 +4,7 @@
 
 GameUser::GameUser()
 : m_nUid(0)
+, m_nAccountId(0)
 {
 }
 

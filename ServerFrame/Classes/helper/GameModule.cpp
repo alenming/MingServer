@@ -1,5 +1,4 @@
 #include "GameModule.h"
-#include "Protocol.h"
 #include "GameNetworkNode.h"
 
 GameModule::GameModule(void)
@@ -16,8 +15,7 @@ void GameModule::processLogic(char* buffer, unsigned int len, IKxComm *target)
 	int nMainCmd = head->MainCommand();
 	int nSubCmd = head->SubCommand();
 	int id = head->uid;
-	LOGIN_DATA* a = reinterpret_cast<LOGIN_DATA*>(head->data());
-
+	//LOGIN_DATA* a = reinterpret_cast<LOGIN_DATA*>(head->data());
 }
 
 void GameModule::processError(IKxComm *target)

@@ -29,11 +29,18 @@ public:
 	int	getUid() { return m_nUid; }
 	void setUid(int uid) { m_nUid = uid; }
 
+	int	getAccountId() { return m_nAccountId; }
+	void setAccountId(int accountId) { m_nAccountId = accountId; }
+
+	std::string	getUserName() { return m_sUserName; }
+	void setUserName(std::string userName) { m_sUserName = userName; }
+
 	IDBModel* getModel(int modelType);
-	
 
 private:
 	int							m_nUid;
+	int							m_nAccountId;
+	std::string					m_sUserName;
 	std::map<int, IDBModel*>	m_mapModels;
 };
 

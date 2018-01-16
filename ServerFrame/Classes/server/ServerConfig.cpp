@@ -2,8 +2,6 @@
 #include "CsvLoader.h"
 #include <time.h>
 #include <string.h>
-#include "KXServer.h"
-#include "Protocol.h"
 
 using namespace std;
 

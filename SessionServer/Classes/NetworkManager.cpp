@@ -2,7 +2,7 @@
 #include "SessionClient.h"
 #include "SessionServer.h"
 #include "SessionConnect.h"
-#include "Protocol.h"
+#include "Head.h"
 
 using namespace std;
 

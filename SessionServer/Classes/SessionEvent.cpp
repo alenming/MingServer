@@ -1,7 +1,6 @@
 #include "SessionEvent.h"
 #include "SessionClient.h"
-#include "Protocol.h"
-
+#include "Head.h"
 
 
 SessionEvent::SessionEvent()

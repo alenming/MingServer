@@ -1,6 +1,5 @@
 #include "GateManager.h"
-#include "Protocol.h"
-#include "KXServer.h"
+
 
 GateManager* GateManager::m_Instance = NULL;
 

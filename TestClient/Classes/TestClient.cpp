@@ -1,8 +1,8 @@
+#include <string>
 #include "TestClient.h"
 #include "BufferTool.h"
-
+#include "Protocol.h"
 #include "GameNetworkNode.h"
-#include <string>
 
 #include "LogManager_s.h"
 #include "LogFileHandler_s.h"
@@ -93,12 +93,10 @@ bool TestClient::onServerInit()
 
 bool TestClient::login()
 {
-	BufferData* buffer = newBufferData(MAIN_CMD::CMD_LOGIN_SERVER, LOGIN_CMD::CMD_LOGIN_CS);
+	BufferData* buffer = newBufferData(MAIN_CMD::CMD_LOGIN_SERVER, LOGIN_CMD::CMD_C2S_LOGIN);
 
 	LOGIN_DATA da = LOGIN_DATA();
 	da.accountId = 123456;
-	da.passwd = 111111;
-	da.accountId = 0;//无用ID
 	buffer->writeData(da);
 
 	//重新写入数据长度

@@ -1,13 +1,7 @@
 #include "ClientModule.h"
-#include "KxCore.h"
 #include "SessionClient.h"
-#include "SessionConnect.h"
-#include "NetworkManager.h"
-#include "Protocol.h"
 #include "SessionServer.h"
-#include "BufferData.h"
-#include <set>
-
+#include "Protocol.h"
 
 ClientModule::ClientModule(void)
 {
@@ -27,8 +21,6 @@ void ClientModule::processLogic(char* buffer, unsigned int len, IKxComm *target)
 	int nMainCmd = head->MainCommand();
 	int nSubCmd = head->SubCommand();
 	head->uid = pClient->getGuestId();//服务器之间通讯用玩家ID
-
-	//LOGIN_DATA* a = reinterpret_cast<LOGIN_DATA*>(head->data());
 
 	KX_LOGDEBUG("ClientModule onRecy Message!");
 
@@ -53,7 +45,7 @@ void ClientModule::userDisconnect(IKxComm *target)
 
     // 设置下线消息
     Head head;
-    head.MakeCommand(1, 1);
+    head.MakeCommand(10, 10);
     head.length = sizeof(head);
     head.uid = pClient->getUserId();
 
@@ -62,4 +54,5 @@ void ClientModule::userDisconnect(IKxComm *target)
     pClient->sendDataToAllServer(reinterpret_cast<char*>(&head), sizeof(head));
     // 关闭socket、从NetWorkManager中和clean移除
     pClient->clean();
+	KX_LOGDEBUG("client is loginout:%s", pClient->getGuestId());
 }

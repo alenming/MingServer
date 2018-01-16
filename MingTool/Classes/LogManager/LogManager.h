@@ -28,8 +28,8 @@ enum LOG_LEVEL
     LOG_INFO,         // 信息级别
     LOG_DEBUG,        // 调试级别
     LOG_ERROR         // 错误级别
-};
 
+};
 // 日志处理句柄对象
 // 实现日志的处理
 class ILogHandler

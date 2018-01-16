@@ -1,5 +1,4 @@
 #include "SessionClient.h"
-#include "Protocol.h"
 #include "NetworkManager.h"
 #include "SessionServer.h"
 #include "NetworkManager.h"

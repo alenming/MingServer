@@ -38,7 +38,7 @@ bool UserModel::Refresh()
 	RedisStorer *pStorer = reinterpret_cast<RedisStorer*>(m_pStorer);
 	if (NULL != pStorer)
 	{
-		for (int i = USR_FD_USERID; i < USR_FD_END; i++)
+		for (int i = USR_FD_ACCOUNTID; i < USR_FD_END; i++)
 		{
 			m_mapUserInfo[i] = 0;
 		}

@@ -3,7 +3,7 @@
 #include "KXServer.h"
 #include "SessionClient.h"
 #include "SessionServer.h"
-#include "Protocol.h"
+#include "Head.h"
 #include "KXServer.h"
 
 

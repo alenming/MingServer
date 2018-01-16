@@ -214,5 +214,8 @@
     <ClInclude Include="Classes\common\GameUserManager.h">
       <Filter>Classes\common</Filter>
     </ClInclude>
+    <ClInclude Include="Classes\server\Head.h">
+      <Filter>Classes\server</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

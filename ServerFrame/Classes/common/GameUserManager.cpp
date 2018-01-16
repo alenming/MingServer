@@ -120,7 +120,7 @@ GameUser* CGameUserManager::initGameUser(int uid)
 	return NULL;
 }
 
-GameUser *CGameUserManager::newGameUser(int uid)
+GameUser *CGameUserManager::newGameUser(int uid, int accountId)
 {
 	// 新用户
 	GameUser *pGameUser = new GameUser;
@@ -129,31 +129,33 @@ GameUser *CGameUserManager::newGameUser(int uid)
 	UserModel *pUserModel = new UserModel;
 
 	pGameUser->setModel(MODELTYPE_USER, pUserModel);
+
 	pGameUser->setUid(uid);
+	pGameUser->setAccountId(accountId);
 
 	// 添加到玩家管理器
 	addGameUser(uid, pGameUser);
 
 	// 用户信息模型初始化
 	char name[32] = {};
-	sprintf_s(name, "%s", "默认名字");
+
+	std::string randName = "DefaultName-" + to_string(uid);
+	sprintf_s(name, "%s", randName);
+	pGameUser->setUserName(name);
+
 	// 用户基本信息
 	std::map<int, int> attrs;
-	for (int i = USR_FD_USERID; i < USR_FD_END; i++)
+	for (int i = USR_FD_ACCOUNTID; i < USR_FD_END; i++)
 	{
 		// 所有属性默认为0
 		attrs[i] = 0;
 	}
 
-	attrs[USR_FD_USERID] = uid;
+	attrs[USR_FD_ACCOUNTID] = uid;
 	attrs[USR_FD_USERLV] = 1;
 	attrs[USR_FD_EXP] = 0;
 	attrs[USR_FD_GOLD] = 1;
 	attrs[USR_FD_DIAMOND] = 1;
-	attrs[USR_FD_FREEHEROTIMES] = 1;
-	attrs[USR_FD_BAGCAPACITY] = 10;
-	attrs[USR_FD_EQUIPREF] = 1;
-	attrs[USR_FD_RESETTIMESTAMP] = 0;
 	attrs[USR_FD_CREATETIME] = nCreateTime;
 
 	if (!pUserModel->NewUser(uid, name, attrs))

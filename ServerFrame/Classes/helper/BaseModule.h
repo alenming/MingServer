@@ -2,7 +2,7 @@
 #define __BASE_MODULE_H__
 
 #include "KXServer.h"
-#include "Protocol.h"
+#include "Head.h"
 
 class BaseModule : public IKxModule
 {

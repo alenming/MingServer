@@ -1,7 +1,7 @@
 #ifndef __BUFFER_DATA_TOOL_H__
 #define __BUFFER_DATA_TOOL_H__
 #include "BufferData.h"
-#include "Protocol.h"
+#include "Head.h"
 
 BufferData* newBufferData(int mainCMD, int subCmd)
 {
