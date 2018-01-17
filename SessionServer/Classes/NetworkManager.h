@@ -36,7 +36,7 @@ public:
 	//获取某个服务器组备份
 	std::vector<IKxComm*>* getBakGroupServer(int nGroupID);
     //获取所有服务器
-    std::map<int, std::vector<IKxComm*> >& getAllServer() { return m_ServerMapByGroup; }
+	std::map<int, IKxComm*>& getAllServer() { return m_ServerList; }
 
 	//将连接添加到待验证连接列表中
 	bool addGuest(unsigned int guestId, IKxComm* obj);

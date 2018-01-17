@@ -7,14 +7,10 @@
 
 using namespace std;
 
-
-void LoginService::processService(int maincmd, int subcmd, int uid, char *buffer, int len, IKxComm *commun)
+// 处理客户端的消息
+void LoginService::processServiceC2S(int subcmd, int uid, char *buffer, int len, IKxComm *commun)
 {
-	if (maincmd != MAIN_CMD::CMD_LOGIN_SERVER)
-	{
-		KX_LOGERROR(" LoginService::processService-> maincmd !=  MAIN_CMD::CMD_LOGIN_SERVER");
-		return;
-	}
+
 	switch (subcmd)
 	{
 	case LOGIN_CMD::CMD_C2S_LOGIN:
@@ -24,6 +20,7 @@ void LoginService::processService(int maincmd, int subcmd, int uid, char *buffer
 		break;
 	}
 }
+
 
 void LoginService::CMD_C2S_LOGIN(int uid, char *buffer, int len, IKxComm *commun)
 {
@@ -81,6 +78,26 @@ void LoginService::CMD_S2C_LOGIN(int uid)
 	//发送用户数据
 	GateManager::getInstance()->Send(buffer->getBuffer(), head->length);
 	KX_LOGDEBUG("LoginFinish uid = %d", head->uid);
+}
+
+// 处理客户端的消息
+void LoginService::processServiceS2S(int subcmd, int uid, char *buffer, int len, IKxComm *commun)
+{
+
+	switch (subcmd)
+	{
+	case SERVER_SUB_CMD::SERVER_SUB_OFFLINE:
+		SERVER_SUB_OFFLINE(uid, buffer, len, commun);
+		break;
+	default:
+		break;
+	}
+}
+
+void LoginService::SERVER_SUB_OFFLINE(int uid, char *buffer, int len, IKxComm *commun)
+{
+	//玩家断线处理 由Session触发
+	KX_LOGDEBUG("SERVER_SUB_OFFLINE uid=%d", uid);
 }
 
 void LoginService::processUserReconect(int uid, char *buffer, int len, IKxComm *commun)

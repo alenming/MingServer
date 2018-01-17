@@ -45,14 +45,15 @@ void ClientModule::userDisconnect(IKxComm *target)
 
     // 设置下线消息
     Head head;
-    head.MakeCommand(10, 10);
+	head.MakeCommand(SERVER_MAIN_CMD::SERVER_MAIN, SERVER_SUB_CMD::SERVER_SUB_OFFLINE);
     head.length = sizeof(head);
-    head.uid = pClient->getUserId();
+    head.uid = pClient->getGuestId();
 
     // 发送数据到后端告知角色下线
     // 发送下线消息给后端指定的服务器
     pClient->sendDataToAllServer(reinterpret_cast<char*>(&head), sizeof(head));
     // 关闭socket、从NetWorkManager中和clean移除
-    pClient->clean();
-	KX_LOGDEBUG("client is loginout:%s", pClient->getGuestId());
+	KX_LOGDEBUG("client is loginout:%d", pClient->getGuestId());
+	pClient->clean();
+	
 }

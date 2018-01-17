@@ -62,17 +62,11 @@ bool SessionClient::sendDataToGroupServer(int nGroupID, char *pszContext, int nL
 
 bool SessionClient::sendDataToAllServer(char *pszContext, int nLen)
 {
-    map<int, vector<IKxComm*> >& allServer = NetWorkManager::getInstance()->getAllServer();
-    for (map<int, vector<IKxComm*> >::iterator ator = allServer.begin();
-        ator != allServer.end(); ++ator)
+    map<int, IKxComm*>& allServer = NetWorkManager::getInstance()->getAllServer();
+    for (map<int,IKxComm* >::iterator ator = allServer.begin(); ator != allServer.end(); ++ator)
     {
-        vector<IKxComm*>& groupServer = ator->second;
-        for (vector<IKxComm*>::iterator iter = groupServer.begin();
-            iter != groupServer.end(); ++iter)
-        {
-            // ps. 如果send失败触发onError，在onError中从NetWorkManager中移除，会导致崩溃
-            (*iter)->sendData(pszContext, nLen);
-        }
+        // ps. 如果send失败触发onError，在onError中从NetWorkManager中移除，会导致崩溃
+		ator->second->sendData(pszContext, nLen);
     }
     return true;
 }

@@ -1,6 +1,7 @@
 #include "LoginSessionModule.h"
 #include "GateManager.h"
 #include "LoginService.h"
+#include "Protocol.h"
 
 LoginSessionModule::LoginSessionModule(void)
 {
@@ -18,7 +19,21 @@ void LoginSessionModule::processLogic(char* buffer, unsigned int len, IKxComm *t
 	int uid = head->uid;
 	int length = head->length;
 
-	LoginService::processService(nMainCmd, nSubCmd, uid, buffer, length, target);
+	switch (nMainCmd)
+	{
+		case MAIN_CMD::CMD_LOGIN_SERVER:
+		{
+			LoginService::processServiceC2S(nSubCmd, uid, buffer, length, target);
+			break;
+		}
+		case SERVER_MAIN_CMD::SERVER_MAIN:
+		{
+			LoginService::processServiceS2S(nSubCmd, uid, buffer, length, target);
+			break;
+		}
+		default:
+			break;
+	}
 
 }
 

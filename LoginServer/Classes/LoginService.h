@@ -7,10 +7,13 @@ class LoginService
 {
 public:
 
-	static void processService(int maincmd, int subcmd, int uid, char *buffer, int len, IKxComm *commun);
+	static void processServiceC2S(int subcmd, int uid, char *buffer, int len, IKxComm *commun);
+	static void processServiceS2S(int subcmd, int uid, char *buffer, int len, IKxComm *commun);
 
 	static void CMD_C2S_LOGIN(int uid, char *buffer, int len, IKxComm *commun);
 	static void CMD_S2C_LOGIN(int uid);
+
+	static void SERVER_SUB_OFFLINE(int uid, char *buffer, int len, IKxComm *commun);
 
 	//前端战斗过程中小退重连
 	static void processUserReconect(int uid, char *buffer, int len, IKxComm *commun);

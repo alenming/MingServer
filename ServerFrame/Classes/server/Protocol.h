@@ -7,6 +7,16 @@
 
 #define PASSWD_SIZE 32
 
+enum SERVER_MAIN_CMD
+{
+	SERVER_MAIN
+};
+
+enum SERVER_SUB_CMD
+{
+	SERVER_SUB_OFFLINE,
+};
+
 enum MAIN_CMD
 {
 	CMD_LOGIN_SERVER = 1,      // µÇÂ¼
