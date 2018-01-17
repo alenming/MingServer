@@ -37,15 +37,13 @@ void LoginSessionModule::processLogic(char* buffer, unsigned int len, IKxComm *t
 
 }
 
-void LoginSessionModule::processError(IKxComm *target)
+int LoginSessionModule::processLength(char* buffer, unsigned int len)
 {
-    // 玩家断线
-    this->userDisconnect(target);
-}
+	if (len < sizeof(Head))
+	{
+		return sizeof(Head);
+	}
 
-// 1. 告诉所有服务器，玩家XXX掉线了
-// 2. 从ClientManager中移除该玩家
-void LoginSessionModule::userDisconnect(IKxComm *target)
-{
-
+	// 返回一个包的长度, 由包头解析, 解析的长度包括包头
+	return reinterpret_cast<Head*>(buffer)->length;
 }

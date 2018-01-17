@@ -98,6 +98,7 @@ void LoginService::SERVER_SUB_OFFLINE(int uid, char *buffer, int len, IKxComm *c
 {
 	//玩家断线处理 由Session触发
 	KX_LOGDEBUG("SERVER_SUB_OFFLINE uid=%d", uid);
+
 }
 
 void LoginService::processUserReconect(int uid, char *buffer, int len, IKxComm *commun)
