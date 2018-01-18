@@ -17,6 +17,8 @@ public:
 
 	virtual int processLength(char* buffer, unsigned int len);
 
+	virtual void processError(IKxComm *target);
+
 };
 
 #endif

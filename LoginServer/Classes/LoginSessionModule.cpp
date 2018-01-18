@@ -47,3 +47,8 @@ int LoginSessionModule::processLength(char* buffer, unsigned int len)
 	// 返回一个包的长度, 由包头解析, 解析的长度包括包头
 	return reinterpret_cast<Head*>(buffer)->length;
 }
+
+void LoginSessionModule::processError(IKxComm *target)
+{
+
+}
