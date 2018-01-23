@@ -19,6 +19,7 @@ enum SERVER_SUB_CMD
 
 enum MAIN_CMD
 {
+	CMD_HEARTBEART = 0,
 	CMD_LOGIN_SERVER = 1,      // µÇÂ¼
 };
 

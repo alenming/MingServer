@@ -10,7 +10,6 @@ using namespace std;
 // 处理客户端的消息
 void LoginService::processServiceC2S(int subcmd, int uid, char *buffer, int len, IKxComm *commun)
 {
-
 	switch (subcmd)
 	{
 	case LOGIN_CMD::CMD_C2S_LOGIN:

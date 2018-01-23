@@ -23,6 +23,11 @@ void ClientModule::processLogic(char* buffer, unsigned int len, IKxComm *target)
 	head->uid = pClient->getGuestId();//服务器之间通讯用玩家ID
 
 	KX_LOGDEBUG("ClientModule onRecy Message!");
+	if (nMainCmd ==  MAIN_CMD::CMD_HEARTBEART && nSubCmd == MAIN_CMD::CMD_HEARTBEART)
+	{
+		KX_LOGDEBUG("onRecy heartbeart!");
+		return;
+	}
 
 	pClient->sendDataToServer(nMainCmd, nSubCmd, buffer, len);
 }
