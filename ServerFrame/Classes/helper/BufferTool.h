@@ -3,7 +3,7 @@
 #include "BufferData.h"
 #include "Head.h"
 
-BufferData* newBufferData(int mainCMD, int subCmd)
+inline BufferData* newBufferData(int mainCMD, int subCmd)
 {
 	BufferData* buffer = new BufferData();
 	buffer->init(256);
@@ -21,7 +21,7 @@ BufferData* newBufferData(int mainCMD, int subCmd)
 	*/
 }
 
-int deleteBufferData(BufferData* buffer)
+inline int deleteBufferData(BufferData* buffer)
 {
 	if (NULL != buffer)
 	{

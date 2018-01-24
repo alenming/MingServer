@@ -21,9 +21,21 @@
     <ClCompile Include="Classes\TestClient.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="Classes\GameModule.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\GameNetworkNode.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes\TestClient.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameModule.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\GameNetworkNode.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>

@@ -41,12 +41,6 @@
     <ClCompile Include="Classes\helper\BufferData.cpp">
       <Filter>Classes\helper</Filter>
     </ClCompile>
-    <ClCompile Include="Classes\helper\GameModule.cpp">
-      <Filter>Classes\helper</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\helper\GameNetworkNode.cpp">
-      <Filter>Classes\helper</Filter>
-    </ClCompile>
     <ClCompile Include="Classes\helper\KxTimerManager.cpp">
       <Filter>Classes\helper</Filter>
     </ClCompile>
@@ -131,12 +125,6 @@
       <Filter>Classes\helper</Filter>
     </ClInclude>
     <ClInclude Include="Classes\helper\BufferTool.h">
-      <Filter>Classes\helper</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\helper\GameModule.h">
-      <Filter>Classes\helper</Filter>
-    </ClInclude>
-    <ClInclude Include="Classes\helper\GameNetworkNode.h">
       <Filter>Classes\helper</Filter>
     </ClInclude>
     <ClInclude Include="Classes\helper\KxTimerCallback.h">

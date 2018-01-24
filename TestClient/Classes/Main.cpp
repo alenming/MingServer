@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <ctime> 
 #include "TestClient.h"
 #include "GameNetworkNode.h"
 
@@ -12,13 +12,23 @@
 
 using namespace std;
 
+void   Delay(int   time)//time*1000ÎªÃëÊý 
+{
+	clock_t   now = clock();
+
+	while (clock() - now < time);
+}
+
 int main(int argc, char ** argv) 
 {
 	
 	TestClient::getInstance()->onServerInit();
+	auto poll = CGameNetworkNode::getInstance()->getPoller();
+	poll->poll();
+
+	Delay(3 * 1000);   //ÑÓÊ±5Ãë
 	TestClient::getInstance()->login();
 
-	auto poll = CGameNetworkNode::getInstance()->getPoller();
 	cout << sizeof(poll) << endl;
 	while (true)
 	{

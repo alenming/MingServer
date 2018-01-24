@@ -72,10 +72,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Classes\GameModule.cpp" />
+    <ClCompile Include="Classes\GameNetworkNode.cpp" />
     <ClCompile Include="Classes\Main.cpp" />
     <ClCompile Include="Classes\TestClient.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Classes\GameModule.h" />
+    <ClInclude Include="Classes\GameNetworkNode.h" />
     <ClInclude Include="Classes\TestClient.h" />
   </ItemGroup>
   <ItemGroup>

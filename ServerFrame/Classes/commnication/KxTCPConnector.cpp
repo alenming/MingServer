@@ -94,7 +94,9 @@ void KxTCPConnector::onConnected(bool success)
         m_ProcessModule->processEvent(
             success ? KXEVENT_CONNECT_SUCCESS : KXEVENT_CONNECT_FAILE, this);
     }
-	m_IsConnecting = success;
+
+	m_IsConnecting = false;
+
     if (success)
     {
         // ÇÐ»»polltype£¬¿ªÆôpollin£¬¹Ø±Õpollout

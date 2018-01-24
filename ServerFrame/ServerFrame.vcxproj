@@ -47,7 +47,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)Classes\;$(ProjectDir)Classes\log\;$(ProjectDir)Classes\core\;$(ProjectDir)Classes\server\;$(ProjectDir)Classes\commnication\;$(ProjectDir)Classes\helper\;$(SolutionDir)MingTool\Classes\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Classes\;$(ProjectDir)Classes\log\;$(ProjectDir)Classes\core\;$(ProjectDir)Classes\server\;$(ProjectDir)Classes\commnication\;$(ProjectDir)Classes\helper\;$(SolutionDir)MingTool\Classes\;$(SolutionDir)..\extern\MingTool\Classes\;$(SolutionDir)..\cocos2d\cocos\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -85,8 +85,6 @@
     <ClCompile Include="Classes\core\KxObject.cpp" />
     <ClCompile Include="Classes\helper\BufferData.cpp" />
     <ClCompile Include="Classes\helper\CsvLoader.cpp" />
-    <ClCompile Include="Classes\helper\GameModule.cpp" />
-    <ClCompile Include="Classes\helper\GameNetworkNode.cpp" />
     <ClCompile Include="Classes\helper\IDBModel.cpp" />
     <ClCompile Include="Classes\helper\KxTimerManager.cpp" />
     <ClCompile Include="Classes\log\LogConsoleHandler_s.cpp" />
@@ -117,8 +115,6 @@
     <ClInclude Include="Classes\helper\BufferData.h" />
     <ClInclude Include="Classes\helper\BufferTool.h" />
     <ClInclude Include="Classes\helper\CsvLoader.h" />
-    <ClInclude Include="Classes\helper\GameModule.h" />
-    <ClInclude Include="Classes\helper\GameNetworkNode.h" />
     <ClInclude Include="Classes\helper\IDBModel.h" />
     <ClInclude Include="Classes\helper\KxTimerCallback.h" />
     <ClInclude Include="Classes\helper\KxTimerManager.h" />

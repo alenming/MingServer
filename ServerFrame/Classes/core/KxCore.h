@@ -50,7 +50,10 @@ typedef int kxSockLen;
 #define SOCKERR_CONNECT_REFUSED(e)		\
 	((e) == WSAECONNREFUSED)
 
+#ifndef snprintf
 #define snprintf  sprintf_s
+#endif // snprintf
+
 #define stlocaltime(pTime,ptm) localtime_s(ptm,pTime)
 #define strncpys strncpy_s
 #define sstrdup _strdup

@@ -1,6 +1,7 @@
 #include "ClientModule.h"
 #include "SessionClient.h"
 #include "SessionServer.h"
+#include "NetworkManager.h"
 #include "Protocol.h"
 
 ClientModule::ClientModule(void)
@@ -25,7 +26,13 @@ void ClientModule::processLogic(char* buffer, unsigned int len, IKxComm *target)
 	KX_LOGDEBUG("ClientModule onRecy Message!");
 	if (nMainCmd ==  MAIN_CMD::CMD_HEARTBEART && nSubCmd == MAIN_CMD::CMD_HEARTBEART)
 	{
-		KX_LOGDEBUG("onRecy heartbeart!");
+		KX_LOGDEBUG("======================= heartbeart!====================");
+		Head head;
+		head.MakeCommand(MAIN_CMD::CMD_HEARTBEART, MAIN_CMD::CMD_HEARTBEART);
+		head.length = sizeof(head);
+		head.uid = -1;
+
+		pClient->sendData(reinterpret_cast<char*>(&head), sizeof(head));
 		return;
 	}
 
