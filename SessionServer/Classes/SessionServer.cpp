@@ -13,9 +13,9 @@
 
 #include "NetworkManager.h"
 
-#include "LogManager_s.h"
-#include "LogFileHandler_s.h"
-#include "LogConsoleHandler_s.h"
+#include "LogManager.h"
+#include "LogFileHandler.h"
+#include "LogConsoleHandler.h"
 
 using namespace std;
 

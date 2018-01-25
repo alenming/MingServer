@@ -4,7 +4,7 @@
 #include "KxPlatform.h"
 #include "LoginSessionModule.h"
 
-#include "common/GameUserManager.h"
+#include "GameUserManager.h"
 #include "DBDriver/DBManager.h"
 
 using namespace std;
@@ -33,7 +33,7 @@ LoginServer* LoginServer::getInstance()
 void LoginServer::destroy()
 {
 	DBManager::getInstance()->destroy();
-	LogManager_s::getInstance()->destroy();
+	LogManager::getInstance()->destroy();
 
     if (NULL != m_Instance)
     {

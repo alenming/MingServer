@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<module>
-	<server type="redis" rangemin="0" rangemax="360" ip="127.0.0.1" port="6379" passward="" dataBaseId="1" />
-	<server type="mysql" rangemin="0" rangemax="360" ip="127.0.0.1" port="3306" passward="" dataBaseId="2" username="root" password="root" dbname="db_test" />
-</module>

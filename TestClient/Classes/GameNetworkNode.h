@@ -8,7 +8,7 @@
 
 #include <functional>
 #include "KxServer.h"
-#include "LogManager_s.h"
+#include "log/LogManager.h"
 
 enum EServerConnType
 {
@@ -55,7 +55,8 @@ public:
 
 
     // 连接到指定ip, port
-	bool connectToServer(const char *ip, int port, EServerConnType connType = SERVER_CONN_SESSION, KXSOCK_VERSION version = KXSOCK_VERSION::KXV_IPV4, function<void(bool)> callBack = nullptr);
+	bool connectToServer(const char *ip, int port, EServerConnType connType = SERVER_CONN_SESSION, KXSOCK_VERSION version = KXSOCK_VERSION::KXV_IPV4, 
+		std::function<void(bool)> callBack = nullptr);
     // 发送数据
     int sendData(char* buffer, unsigned int len, EServerConnType connType = SERVER_CONN_SESSION);
     // 提供重连接口, 按照之前选择的服务器ip地址

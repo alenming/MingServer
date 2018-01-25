@@ -1,5 +1,6 @@
 #include "GameModule.h"
 #include "GameNetworkNode.h"
+#include "server/Head.h"
 
 GameModule::GameModule(void)
 {

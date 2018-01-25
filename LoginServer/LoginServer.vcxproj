@@ -52,13 +52,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)ServerFrame\Classes\;$(SolutionDir)ServerFrame\Classes\log\;$(SolutionDir)ServerFrame\Classes\server\;$(SolutionDir)ServerFrame\Classes\helper\;$(SolutionDir)ServerFrame\Classes\core\;$(SolutionDir)ServerFrame\Classes\commnication\;$(ProjectDir)Classes\;$(SolutionDir)MingTool\Classes\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Extern\ServerFrame\;$(SolutionDir)Extern\ServerFrame\data\;$(SolutionDir)Extern\ServerFrame\log\;$(SolutionDir)Extern\ServerFrame\server\;$(SolutionDir)Extern\ServerFrame\core\;$(SolutionDir)Extern\ServerFrame\commnication\;$(SolutionDir)Extern\ServerFrame\helper\;$(SolutionDir)Extern\Tool\;$(SolutionDir)Extern\Tool\DBDriver\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\;$(SolutionDir)Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libmysql.lib;libmysqld.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -90,6 +90,97 @@ start TestClient.exe</Command>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxBufferList.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxCommInterfaces.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxEpoller.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxSelectPoller.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxSock.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPClienter.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPConnector.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPListener.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPUnit.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxUDPUnit.h" />
+    <ClInclude Include="..\Extern\ServerFrame\core\KxCore.h" />
+    <ClInclude Include="..\Extern\ServerFrame\core\KxMemPool.h" />
+    <ClInclude Include="..\Extern\ServerFrame\core\KxObject.h" />
+    <ClInclude Include="..\Extern\ServerFrame\core\KxPlatform.h" />
+    <ClInclude Include="..\Extern\ServerFrame\data\DataModel\UserModel.h" />
+    <ClInclude Include="..\Extern\ServerFrame\data\GameUser.h" />
+    <ClInclude Include="..\Extern\ServerFrame\data\GameUserManager.h" />
+    <ClInclude Include="..\Extern\ServerFrame\helper\BaseModule.h" />
+    <ClInclude Include="..\Extern\ServerFrame\helper\BufferData.h" />
+    <ClInclude Include="..\Extern\ServerFrame\helper\BufferTool.h" />
+    <ClInclude Include="..\Extern\ServerFrame\helper\CsvLoader.h" />
+    <ClInclude Include="..\Extern\ServerFrame\helper\IDBModel.h" />
+    <ClInclude Include="..\Extern\ServerFrame\helper\KxTimerCallback.h" />
+    <ClInclude Include="..\Extern\ServerFrame\helper\KxTimerManager.h" />
+    <ClInclude Include="..\Extern\ServerFrame\helper\KxTimeVal.h" />
+    <ClInclude Include="..\Extern\ServerFrame\helper\ModelDef.h" />
+    <ClInclude Include="..\Extern\ServerFrame\KXServer.h" />
+    <ClInclude Include="..\Extern\ServerFrame\log\ILogHandler.h" />
+    <ClInclude Include="..\Extern\ServerFrame\log\LogConsoleHandler.h" />
+    <ClInclude Include="..\Extern\ServerFrame\log\LogFileHandler.h" />
+    <ClInclude Include="..\Extern\ServerFrame\log\LogManager.h" />
+    <ClInclude Include="..\Extern\ServerFrame\server\Head.h" />
+    <ClInclude Include="..\Extern\ServerFrame\server\KxBaseServer.h" />
+    <ClInclude Include="..\Extern\ServerFrame\server\Protocol.h" />
+    <ClInclude Include="..\Extern\ServerFrame\server\ServerConfig.h" />
+    <ClInclude Include="..\Extern\Tool\CommonHead.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\DBManager.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\hiredis\async.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\hiredis\config.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\hiredis\dict.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\hiredis\fmacros.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\hiredis\hiredis.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\hiredis\net.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\hiredis\sds.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\IStorer.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\big_endian.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\byte_order_generic.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\byte_order_generic_x86.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\byte_order_generic_x86_64.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\decimal.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\errmsg.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\IDBProxy.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\keycache.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\little_endian.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\mysql.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\mysqld_ername.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\mysqld_error.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\mysql_com.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\mysql_com_server.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\mysql_embed.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\mysql_time.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\mysql_version.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_alloc.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_attribute.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_byteorder.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_compiler.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_config.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_dbug.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_dir.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_getopt.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_global.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_list.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_net.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_pthread.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_sys.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\my_xml.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\m_ctype.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\m_string.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\plugin.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\plugin_audit.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\plugin_ftparser.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\plugin_validate_password.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\sql_common.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\sql_state.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\sslopt-case.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\sslopt-longopts.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\sslopt-vars.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\mysqld\typelib.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\MysqlStorer.h" />
+    <ClInclude Include="..\Extern\Tool\DBDriver\RedisStorer.h" />
+    <ClInclude Include="..\Extern\Tool\XML\XML.h" />
     <ClInclude Include="Classes\LoginSessionModule.h" />
     <ClInclude Include="Classes\GateManager.h" />
     <ClInclude Include="Classes\LoginListener.h" />
@@ -97,20 +188,45 @@ start TestClient.exe</Command>
     <ClInclude Include="Classes\LoginService.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxBufferList.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxEpoller.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxSelectPoller.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxSock.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPClienter.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPConnector.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPListener.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPUnit.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxUDPUnit.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\core\KxMemPool.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\core\KxObject.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\data\DataModel\UserModel.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\data\GameUser.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\data\GameUserManager.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\helper\BufferData.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\helper\CsvLoader.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\helper\IDBModel.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\helper\KxTimerManager.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\log\LogConsoleHandler.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\log\LogFileHandler.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\log\LogManager.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\server\KxBaseServer.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\server\ServerConfig.cpp" />
+    <ClCompile Include="..\Extern\Tool\DBDriver\DBManager.cpp" />
+    <ClCompile Include="..\Extern\Tool\DBDriver\hiredis\async.c" />
+    <ClCompile Include="..\Extern\Tool\DBDriver\hiredis\dict.c" />
+    <ClCompile Include="..\Extern\Tool\DBDriver\hiredis\hiredis.c" />
+    <ClCompile Include="..\Extern\Tool\DBDriver\hiredis\net.c" />
+    <ClCompile Include="..\Extern\Tool\DBDriver\hiredis\sds.c" />
+    <ClCompile Include="..\Extern\Tool\DBDriver\IStorer.cpp" />
+    <ClCompile Include="..\Extern\Tool\DBDriver\MysqlStorer.cpp" />
+    <ClCompile Include="..\Extern\Tool\DBDriver\RedisStorer.cpp" />
+    <ClCompile Include="..\Extern\Tool\XML\XML.cpp" />
     <ClCompile Include="Classes\LoginSessionModule.cpp" />
     <ClCompile Include="Classes\GateManager.cpp" />
     <ClCompile Include="Classes\LoginListener.cpp" />
     <ClCompile Include="Classes\LoginServer.cpp" />
     <ClCompile Include="Classes\LoginService.cpp" />
     <ClCompile Include="Classes\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MingTool\MingTool.vcxproj">
-      <Project>{f5905944-3348-4629-81e3-6dd8a58ffc07}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\ServerFrame\ServerFrame.vcxproj">
-      <Project>{687a4e8b-f657-465d-bf78-10b93a0b39f7}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

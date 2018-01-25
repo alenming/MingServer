@@ -1,12 +1,12 @@
 #include <string>
 #include "TestClient.h"
-#include "BufferTool.h"
-#include "Protocol.h"
 #include "GameNetworkNode.h"
 
-#include "LogManager_s.h"
-#include "LogFileHandler_s.h"
-#include "LogConsoleHandler_s.h"
+#include "helper/BufferTool.h"
+#include "server/Protocol.h"
+#include "log/LogManager.h"
+#include "log/LogFileHandler.h"
+#include "log/LogConsoleHandler.h"
 
 
 TestClient* TestClient::m_Instance = NULL;
@@ -43,14 +43,14 @@ void TestClient::destroy()
 bool TestClient::onServerInit()
 {
 
-	LogManager_s::getInstance()->setShowTime(true);
-	LogManager_s::getInstance()->setShowDate(true);
-	LogManager_s::getInstance()->addHandler(1, new LogConsoleHandler_s());
-	LogFileHandler_s* pFileHandle = new LogFileHandler_s();
+	LogManager::getInstance()->setShowTime(true);
+	LogManager::getInstance()->setShowDate(true);
+	LogManager::getInstance()->addHandler(1, new LogConsoleHandler());
+	LogFileHandler* pFileHandle = new LogFileHandler();
 	pFileHandle->setFilePath("../bin/");
 	pFileHandle->setFileName("TestClientOut");
 	pFileHandle->setFastModel(false);
-	LogManager_s::getInstance()->addHandler(2, pFileHandle);
+	LogManager::getInstance()->addHandler(2, pFileHandle);
 	
 
 	m_ServerCon = new ConnectServerConf();
@@ -109,7 +109,10 @@ bool TestClient::login()
 	{
 		KX_LOGDEBUG("CGameNetworkNode::sendData to server successful!");
 		isSuccessful = true;
-		
+	}
+	else
+	{
+		KX_LOGDEBUG("CGameNetworkNode::sendData to server failed!");
 	}
 	deleteBufferData(buffer);
 	return isSuccessful;

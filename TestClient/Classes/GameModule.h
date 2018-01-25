@@ -1,7 +1,7 @@
 #ifndef __GAMEMODULE_H__
 #define __GAMEMODULE_H__
 
-#include "BaseModule.h"
+#include "helper/BaseModule.h"
 
 class GameModule : public BaseModule
 {

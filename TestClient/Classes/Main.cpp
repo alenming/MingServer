@@ -29,7 +29,6 @@ int main(int argc, char ** argv)
 	Delay(3 * 1000);   //ÑÓÊ±5Ãë
 	TestClient::getInstance()->login();
 
-	cout << sizeof(poll) << endl;
 	while (true)
 	{
 		poll->poll();

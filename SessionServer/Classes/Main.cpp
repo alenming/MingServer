@@ -6,14 +6,12 @@
  * 4.接收到后端消息转发给指定的前端
  * 5.收到后端指令强制关闭指定的前端
  * 6.UserId 对应 CommunicationId 的哈希
- * 
- * 2013-10-30 By 明爷
  */
 #include "KXServer.h"
 #include "SessionServer.h"
-#include "LogManager_s.h"
-#include "LogFileHandler_s.h"
-#include "LogConsoleHandler_s.h"
+#include "LogManager.h"
+#include "LogFileHandler.h"
+#include "LogConsoleHandler.h"
 
 int main(int argc, char ** argv) 
 {

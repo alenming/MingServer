@@ -1,7 +1,7 @@
 #include "LoginListener.h"
 #include "LoginServer.h"
 #include "GateManager.h"
-#include "LogManager_s.h"
+#include "LogManager.h"
 
 LoginListener::LoginListener()
 {
