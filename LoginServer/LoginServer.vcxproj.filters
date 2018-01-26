@@ -50,6 +50,57 @@
     <Filter Include="Classes\Extern\Tool\XML">
       <UniqueIdentifier>{2784eda9-5665-4c66-b90a-b076f07700b1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Extern\Tool\Common">
+      <UniqueIdentifier>{27689bc0-b8ea-45f7-8909-a58221f65827}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\DataManager">
+      <UniqueIdentifier>{94f6b8ae-7df8-4695-8cbc-464d82edbc3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\LocalDefault">
+      <UniqueIdentifier>{59d5d680-dec7-4bfb-b8d8-7279ce8c87c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\Lua">
+      <UniqueIdentifier>{cab1ece6-9352-451c-8c24-03994ca644ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\MD5">
+      <UniqueIdentifier>{3819a91f-c66e-4879-a1a5-f689696b4cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\MyJson">
+      <UniqueIdentifier>{f3c53fda-20ae-4f95-bccf-acee6394acdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\Observer">
+      <UniqueIdentifier>{33255a0b-84f8-4c22-969b-ab7f37f3d10d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\Pthread">
+      <UniqueIdentifier>{dc000209-ace7-4606-aa3b-73ebaed75f28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\StringFormat">
+      <UniqueIdentifier>{f5d555c5-70c0-412b-b1da-b00103b9ae9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\Tea">
+      <UniqueIdentifier>{df641b35-2f39-48f5-9a90-096affa61607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\TimeManager">
+      <UniqueIdentifier>{2ceca04d-c09a-4e81-9f7c-fe504361c78d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\Utils">
+      <UniqueIdentifier>{41ee13c9-1b38-4ad2-8f0b-21e045d949bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\UTFGBK">
+      <UniqueIdentifier>{2b39c5bb-e5a9-4f51-89fa-fdb0e5a44ff1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\Socket">
+      <UniqueIdentifier>{7b525c5c-97b4-4427-abd2-9cae29dced5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\Socket\network">
+      <UniqueIdentifier>{4ce9bf99-f021-4a36-a144-e9dccb8dfd57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\Socket\socket">
+      <UniqueIdentifier>{6b7e9b8d-adcb-409e-b375-ef7e21a00890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\Tool\MyJson\json">
+      <UniqueIdentifier>{1a9fea44-0cdd-401e-a814-a3fd7c555299}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes\GateManager.h">
@@ -340,6 +391,156 @@
     <ClInclude Include="..\Extern\Tool\CommonHead.h">
       <Filter>Classes\Extern\Tool</Filter>
     </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Common\Data_.h">
+      <Filter>Classes\Extern\Tool\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Common\Value_.h">
+      <Filter>Classes\Extern\Tool\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\DataManager\CSVParser.h">
+      <Filter>Classes\Extern\Tool\DataManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\DataManager\DataManager.h">
+      <Filter>Classes\Extern\Tool\DataManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\DataManager\DataTable.h">
+      <Filter>Classes\Extern\Tool\DataManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\LocalDefault\base64_.h">
+      <Filter>Classes\Extern\Tool\LocalDefault</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\LocalDefault\LocalDefault.h">
+      <Filter>Classes\Extern\Tool\LocalDefault</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Lua\LuaRegiest.h">
+      <Filter>Classes\Extern\Tool\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Lua\LuaStack_.h">
+      <Filter>Classes\Extern\Tool\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Lua\LuaTools.h">
+      <Filter>Classes\Extern\Tool\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MD5\MD5.h">
+      <Filter>Classes\Extern\Tool\MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MD5\MD5Def.h">
+      <Filter>Classes\Extern\Tool\MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\MyJson.h">
+      <Filter>Classes\Extern\Tool\MyJson</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Observer\Observer.h">
+      <Filter>Classes\Extern\Tool\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Pthread\pthread.h">
+      <Filter>Classes\Extern\Tool\Pthread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Pthread\sched.h">
+      <Filter>Classes\Extern\Tool\Pthread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\StringFormat\StringFormat.h">
+      <Filter>Classes\Extern\Tool\StringFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Tea\TEACrypt.h">
+      <Filter>Classes\Extern\Tool\Tea</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\TimeManager\LocalTimer.h">
+      <Filter>Classes\Extern\Tool\TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\TimeManager\TimeManager.h">
+      <Filter>Classes\Extern\Tool\TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Utils\UrlEncode.h">
+      <Filter>Classes\Extern\Tool\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Utils\ValueCrypt.h">
+      <Filter>Classes\Extern\Tool\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\UTFGBK\iconv.h">
+      <Filter>Classes\Extern\Tool\UTFGBK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\UTFGBK\UtfGbk.h">
+      <Filter>Classes\Extern\Tool\UTFGBK</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\AbstractCommunicator.h">
+      <Filter>Classes\Extern\Tool\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\Command.h">
+      <Filter>Classes\Extern\Tool\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\EnvConfig.h">
+      <Filter>Classes\Extern\Tool\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\HttpCommunicator.h">
+      <Filter>Classes\Extern\Tool\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\ICommListener.h">
+      <Filter>Classes\Extern\Tool\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\SocketCommunicator.h">
+      <Filter>Classes\Extern\Tool\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\network\HttpClient.h">
+      <Filter>Classes\Extern\Tool\Socket\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\network\HttpRequest.h">
+      <Filter>Classes\Extern\Tool\Socket\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\network\HttpResponse.h">
+      <Filter>Classes\Extern\Tool\Socket\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\network\SocketIO.h">
+      <Filter>Classes\Extern\Tool\Socket\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\network\WebSocket.h">
+      <Filter>Classes\Extern\Tool\Socket\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\socket\ByteBuffer.h">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\socket\message.h">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\socket\MSAutoReleasePool.h">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\socket\NetDef.h">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\socket\SocketClient.h">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\Socket\socket\Util.h">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\json\autolink.h">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\json\config.h">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\json\features.h">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\json\forwards.h">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\json\json.h">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\json\json_batchallocator.h">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\json\reader.h">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\json\value.h">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\Tool\MyJson\json\writer.h">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes\GateManager.cpp">
@@ -459,5 +660,115 @@
     <ClCompile Include="..\Extern\Tool\XML\XML.cpp">
       <Filter>Classes\Extern\Tool\XML</Filter>
     </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Common\Data_.cpp">
+      <Filter>Classes\Extern\Tool\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Common\Value_.cpp">
+      <Filter>Classes\Extern\Tool\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\DataManager\DataManager.cpp">
+      <Filter>Classes\Extern\Tool\DataManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\DataManager\DataTable.cpp">
+      <Filter>Classes\Extern\Tool\DataManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\LocalDefault\base64_.cpp">
+      <Filter>Classes\Extern\Tool\LocalDefault</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\LocalDefault\LocalDefault.cpp">
+      <Filter>Classes\Extern\Tool\LocalDefault</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Lua\LuaRegiest.cpp">
+      <Filter>Classes\Extern\Tool\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Lua\LuaStack_.cpp">
+      <Filter>Classes\Extern\Tool\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Lua\LuaTools.cpp">
+      <Filter>Classes\Extern\Tool\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\MD5\MD5.cpp">
+      <Filter>Classes\Extern\Tool\MD5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\MyJson\MyJson.cpp">
+      <Filter>Classes\Extern\Tool\MyJson</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Observer\Observer.cpp">
+      <Filter>Classes\Extern\Tool\Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\StringFormat\StringFormat.cpp">
+      <Filter>Classes\Extern\Tool\StringFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Tea\TEACrypt.cpp">
+      <Filter>Classes\Extern\Tool\Tea</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\TimeManager\LocalTimer.cpp">
+      <Filter>Classes\Extern\Tool\TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\TimeManager\TimeManager.cpp">
+      <Filter>Classes\Extern\Tool\TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Utils\UrlEncode.cpp">
+      <Filter>Classes\Extern\Tool\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Utils\ValueCrypt.cpp">
+      <Filter>Classes\Extern\Tool\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\UTFGBK\UtfGbk.cpp">
+      <Filter>Classes\Extern\Tool\UTFGBK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\AbstractCommunicator.cpp">
+      <Filter>Classes\Extern\Tool\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\HttpCommunicator.cpp">
+      <Filter>Classes\Extern\Tool\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\SocketCommunicator.cpp">
+      <Filter>Classes\Extern\Tool\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\network\HttpClient.cpp">
+      <Filter>Classes\Extern\Tool\Socket\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\network\SocketIO.cpp">
+      <Filter>Classes\Extern\Tool\Socket\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\network\WebSocket.cpp">
+      <Filter>Classes\Extern\Tool\Socket\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\socket\ByteBuffer.cpp">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\socket\message.cpp">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\socket\SocketClient.cpp">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\Socket\socket\Util.cpp">
+      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\MyJson\json\json_reader.cpp">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\MyJson\json\json_value.cpp">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\Tool\MyJson\json\json_writer.cpp">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Extern\Tool\MyJson\json\json_internalarray.inl">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </None>
+    <None Include="..\Extern\Tool\MyJson\json\json_internalmap.inl">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </None>
+    <None Include="..\Extern\Tool\MyJson\json\json_valueiterator.inl">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </None>
+    <None Include="..\Extern\Tool\MyJson\json\sconscript">
+      <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </None>
   </ItemGroup>
 </Project>

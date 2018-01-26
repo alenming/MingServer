@@ -11,8 +11,6 @@ extern "C"
 #include "luajit/lauxlib.h"
 #include "luajit/lualib.h"
 }
-#endif
-
 
 
 #if _MSC_VER > 1800
@@ -47,6 +45,8 @@ protected:
 	lua_State *_state;
 	static LuaStack_* m_Instance;
 };
+
+#endif
 
 
 #endif // __LUA_STACK_H_

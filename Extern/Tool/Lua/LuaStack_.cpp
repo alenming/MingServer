@@ -1,7 +1,7 @@
 #include "LuaStack_.h"
 
 
-
+#ifdef RunningInServer
 
 LuaStack_* LuaStack_::m_Instance = NULL;
 
@@ -270,3 +270,4 @@ int LuaStack_::luaLoadBuffer(lua_State *L, const char *chunk, int chunkSize, con
 	return r;
 }
 
+#endif

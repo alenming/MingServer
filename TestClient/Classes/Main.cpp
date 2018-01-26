@@ -6,9 +6,57 @@
 
 //#include "Lua/LuaRegiest.h"
 //#include "Lua/LuaStack.h"
-//#include "LogManager/LogFileHandler.h"
-//#include "LogManager/LogConsoleHandler.h"
-//#include "LogManager/LogManager.h"
+
+#include "log/LogFileHandler.h"
+#include "log/LogConsoleHandler.h"
+#include "log/LogManager.h"
+
+#include "CommonHead.h"
+#include <io.h>
+//#include <cstring>
+
+void listFiles(const char * dir)
+{
+	char dirNew[200];
+	strcpy(dirNew, dir);
+	strcat(dirNew, "\\*.*");    // 在目录后面加上"\\*.*"进行第一次搜索
+
+	intptr_t handle;
+	_finddata_t findData;
+
+	handle = _findfirst(dirNew, &findData);
+	if (handle == -1)        // 检查是否成功
+		return;
+
+	do
+	{
+		if (findData.attrib & _A_SUBDIR)
+		{
+			if (strcmp(findData.name, ".") == 0 || strcmp(findData.name, "..") == 0)
+				continue;
+
+			//cout << findData.name << "\t<dir>\n";
+
+			KX_LOGDEBUG(" findData.name=%s <dir>", findData.name);
+
+			// 在目录后面加上"\\"和搜索到的目录名进行下一次搜索
+			strcpy(dirNew, dir);
+			strcat(dirNew, "\\");
+			strcat(dirNew, findData.name);
+
+			listFiles(dirNew);
+		}
+		else
+		{
+			KX_LOGDEBUG(" findData.name=%s size=%d", findData.name, findData.size);
+			//cout << findData.name << "\t" << findData.size << " bytes.\n";
+		}
+			
+	} while (_findnext(handle, &findData) == 0);
+
+	_findclose(handle);    // 关闭搜索句柄
+}
+
 
 using namespace std;
 
@@ -22,39 +70,43 @@ void   Delay(int   time)//time*1000为秒数
 int main(int argc, char ** argv) 
 {
 	
-	TestClient::getInstance()->onServerInit();
-	auto poll = CGameNetworkNode::getInstance()->getPoller();
-	poll->poll();
+	//TestClient::getInstance()->onServerInit();
+	//auto poll = CGameNetworkNode::getInstance()->getPoller();
+	//poll->poll();
 
-	Delay(3 * 1000);   //延时5秒
-	TestClient::getInstance()->login();
+	//Delay(3 * 1000);   //延时5秒
+	//TestClient::getInstance()->login();
 
-	while (true)
-	{
-		poll->poll();
-	}
+	//while (true)
+	//{
+	//	poll->poll();
+	//}
 
-	char temp = ' ';
-	cout << "登录中,任意键关闭" << endl;
-	scanf("%c", &temp);
-    TestClient::destroy();
+	//char temp = ' ';
+	//cout << "登录中,任意键关闭" << endl;
+	//scanf("%c", &temp);
+ //   TestClient::destroy();
 
-	//LogManager::getInstance()->setShowTime(true);
-	//LogManager::getInstance()->setShowDate(true);
-	//LogManager::getInstance()->addHandler(1, new LogConsoleHandler());
-	//LogFileHandler* pFileHandle = new LogFileHandler();
-	//pFileHandle->setFilePath("../bin/");
-	//pFileHandle->setFileName("TestOut");
-	//pFileHandle->setFastModel(false);
-	//LogManager::getInstance()->addHandler(2, pFileHandle);
+	LogManager::getInstance()->setShowTime(false);
+	LogManager::getInstance()->setShowDate(false);
+	LogManager::getInstance()->addHandler(1, new LogConsoleHandler());
+	LogFileHandler* pFileHandle = new LogFileHandler();
+	pFileHandle->setFilePath("../bin/");
+	pFileHandle->setFileName("TestOut");
+	pFileHandle->setFastModel(false);
+	LogManager::getInstance()->addHandler(2, pFileHandle);
 
 	//regiestLuaFunction();
 	//LuaStack::getInstance()->executeScriptFile("main.lua");
 	//LogManager::destroy();
+	
+	std::string dir = "./";
 
-	//while (true)
-	//{
+	listFiles(dir.c_str());
 
-	//}
+	while (true)
+	{
+
+	}
     return 0;
 }
