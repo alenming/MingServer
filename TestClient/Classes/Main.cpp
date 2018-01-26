@@ -13,7 +13,10 @@
 
 #include "CommonHead.h"
 #include <io.h>
-//#include <cstring>
+#include <cstringt.h>
+#include "windows.h"
+
+using namespace std;
 
 void listFiles(const char * dir)
 {
@@ -58,7 +61,40 @@ void listFiles(const char * dir)
 }
 
 
-using namespace std;
+
+void show_file(char path[], int level = 0)
+{
+	char find_path[128];
+	sprintf(find_path, "%s*", path);
+
+	WIN32_FIND_DATA FindFileData;
+	HANDLE hFind;
+	bool bContinue = true;
+
+	hFind = FindFirstFile(find_path, &FindFileData);
+
+	if (hFind == INVALID_HANDLE_VALUE)
+		return;
+
+	while (bContinue)
+	{
+		if (strcmp(FindFileData.cFileName, "..") && strcmp(FindFileData.cFileName, "."))
+		{
+			for (int i = 0; i < level; ++i)
+				cout << "  ";
+			cout << FindFileData.cFileName << endl;
+
+			if (FindFileData.dwFileAttributes == FILE_ATTRIBUTE_DIRECTORY)
+			{
+				sprintf(find_path, "%s%s\\", path, FindFileData.cFileName);
+				show_file(find_path, level + 1);
+			}
+		}
+		bContinue = FindNextFile(hFind, &FindFileData);
+	}
+
+}
+
 
 void   Delay(int   time)//time*1000ÎªÃëÊý 
 {
@@ -102,7 +138,9 @@ int main(int argc, char ** argv)
 	
 	std::string dir = "./";
 
-	listFiles(dir.c_str());
+	//listFiles(dir.c_str());
+
+	show_file("./");
 
 	while (true)
 	{
