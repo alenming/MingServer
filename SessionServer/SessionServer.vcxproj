@@ -157,11 +157,6 @@
     <ClCompile Include="Classes\ClientModule.cpp" />
     <ClCompile Include="Classes\SessionServer.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ServerFrame\ServerFrame.vcxproj">
-      <Project>{687a4e8b-f657-465d-bf78-10b93a0b39f7}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

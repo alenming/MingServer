@@ -12,6 +12,10 @@ void LoginService::processServiceC2S(int subcmd, int uid, char *buffer, int len,
 {
 	switch (subcmd)
 	{
+	case LOGIN_CMD::CMD_C2S_REGISTER:
+	{
+		CMD_C2S_REGISTER(uid, buffer, len, commun);
+	}
 	case LOGIN_CMD::CMD_C2S_LOGIN:
 		CMD_C2S_LOGIN(uid, buffer, len, commun);
 		break;
@@ -20,10 +24,29 @@ void LoginService::processServiceC2S(int subcmd, int uid, char *buffer, int len,
 	}
 }
 
+void LoginService::CMD_C2S_REGISTER(int uid, char *buffer, int len, IKxComm *commun)
+{
+	Head* head = reinterpret_cast<Head*>(buffer);
+
+	if (head->uid != uid || head->uid < 0)
+	{
+		return;
+	}
+
+	REGISTER_DATA *loginCS = reinterpret_cast<REGISTER_DATA*>(head->data());
+	GameUser* pGameUser = CGameUserManager::getInstance()->newGameUser(uid, loginCS->accountId);
+
+	CMD_S2C_REGISTER(uid);
+}
+
+void LoginService::CMD_S2C_REGISTER(int uid)
+{
+
+
+}
 
 void LoginService::CMD_C2S_LOGIN(int uid, char *buffer, int len, IKxComm *commun)
 {
-	// 直接转发给游戏服务器
 	Head* head = reinterpret_cast<Head*>(buffer);
 
 	if (head->uid != uid || head->uid < 0)
@@ -82,7 +105,6 @@ void LoginService::CMD_S2C_LOGIN(int uid)
 // 处理客户端的消息
 void LoginService::processServiceS2S(int subcmd, int uid, char *buffer, int len, IKxComm *commun)
 {
-
 	switch (subcmd)
 	{
 	case SERVER_SUB_CMD::SERVER_SUB_OFFLINE:
@@ -115,4 +137,5 @@ void LoginService::processUserReconect(int uid, char *buffer, int len, IKxComm *
 	// 改方法会剔除移除列表数据，不让它自动释放，因为我胡汉三又回来了
 	CGameUserManager::getInstance()->donotDeleteUser(uid);
 }
+
 
