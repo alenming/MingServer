@@ -1,5 +1,5 @@
 /*
-* 通讯协议 主要定义主命令和包头
+* 脥篓脩露脨颅脪茅 脰梅脪陋露篓脪氓脰梅脙眉脕卯潞脥掳眉脥路
 */
 
 #ifndef __HEAD_H__
@@ -14,7 +14,7 @@ struct Head
 {
     int length;
     int cmd;
-	int uid; //服务器用
+	int uid; //路镁脦帽脝梅脫脙
 
     inline void MakeCommand(int main, int sub)
     {
