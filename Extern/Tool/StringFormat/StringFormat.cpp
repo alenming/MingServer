@@ -1,4 +1,4 @@
-﻿#include "StringFormat.h"
+#include "StringFormat.h"
 #include <regex>  
 #include <tchar.h>
 
