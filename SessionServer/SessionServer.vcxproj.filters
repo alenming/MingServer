@@ -11,9 +11,6 @@
     <Filter Include="Classes\Extern">
       <UniqueIdentifier>{3362a857-294b-46c6-86b4-ab602e57e187}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Extern\Tool">
-      <UniqueIdentifier>{e9c1219a-3bfd-47a3-b6f1-5fedf6330627}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\Extern\ServerFrame">
       <UniqueIdentifier>{d2a336d3-417f-47f8-b0a4-135b79ffb6cb}</UniqueIdentifier>
     </Filter>
@@ -31,6 +28,9 @@
     </Filter>
     <Filter Include="Classes\Extern\ServerFrame\server">
       <UniqueIdentifier>{8af984d6-77b5-49c1-b158-eb7f0ce1583c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\ServerFrame\protocol">
+      <UniqueIdentifier>{7d531589-721a-4d62-8f8f-7736f4d95730}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -77,9 +77,6 @@
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClInclude>
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxSock.h">
-      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPClienter.h">
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClInclude>
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPConnector.h">
@@ -160,6 +157,18 @@
     <ClInclude Include="..\Extern\ServerFrame\KXServer.h">
       <Filter>Classes\Extern\ServerFrame</Filter>
     </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\protocol\BagProtocol.h">
+      <Filter>Classes\Extern\ServerFrame\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\protocol\LoginProtocol.h">
+      <Filter>Classes\Extern\ServerFrame\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\protocol\MainProtocol.h">
+      <Filter>Classes\Extern\ServerFrame\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPClienter.h">
+      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Classes\ConnectModule.cpp">
@@ -202,9 +211,6 @@
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClCompile>
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxSock.cpp">
-      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPClienter.cpp">
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClCompile>
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPConnector.cpp">
@@ -251,6 +257,9 @@
     </ClCompile>
     <ClCompile Include="..\Extern\ServerFrame\log\LogManager.cpp">
       <Filter>Classes\Extern\ServerFrame\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPClienter.cpp">
+      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -76,7 +76,7 @@
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxEpoller.cpp" />
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxSelectPoller.cpp" />
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxSock.cpp" />
-    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPClienter.cpp" />
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPClient.cpp" />
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPConnector.cpp" />
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPListener.cpp" />
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPUnit.cpp" />
@@ -145,7 +145,7 @@
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxEpoller.h" />
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxSelectPoller.h" />
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxSock.h" />
-    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPClienter.h" />
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPClient.h" />
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPConnector.h" />
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPListener.h" />
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPUnit.h" />

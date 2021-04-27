@@ -1,9 +1,9 @@
 #include "UserModel.h"
 
-#include "ModelDef.h"
+#include "helper/ModelDef.h"
 
-#include "DBManager.h"
-#include "RedisStorer.h"
+#include "DBDriver/DBManager.h"
+#include "DBDriver/RedisStorer.h"
 
 UserModel::UserModel()
 	: m_nUid(0)

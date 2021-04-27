@@ -110,6 +110,9 @@
     <ClInclude Include="..\Extern\ServerFrame\log\LogConsoleHandler.h" />
     <ClInclude Include="..\Extern\ServerFrame\log\LogFileHandler.h" />
     <ClInclude Include="..\Extern\ServerFrame\log\LogManager.h" />
+    <ClInclude Include="..\Extern\ServerFrame\protocol\BagProtocol.h" />
+    <ClInclude Include="..\Extern\ServerFrame\protocol\LoginProtocol.h" />
+    <ClInclude Include="..\Extern\ServerFrame\protocol\MainProtocol.h" />
     <ClInclude Include="..\Extern\ServerFrame\server\Head.h" />
     <ClInclude Include="..\Extern\ServerFrame\server\KxBaseServer.h" />
     <ClInclude Include="..\Extern\ServerFrame\server\Protocol.h" />

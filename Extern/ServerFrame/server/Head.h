@@ -1,7 +1,3 @@
-/*
-* Í¨Ñ¶Ð­Òé Ö÷Òª¶¨ÒåÖ÷ÃüÁîºÍ°üÍ·
-*/
-
 #ifndef __HEAD_H__
 #define __HEAD_H__
 
@@ -14,7 +10,7 @@ struct Head
 {
     int length;
     int cmd;
-	int uid; //·þÎñÆ÷ÓÃ
+	int uid;
 
     inline void MakeCommand(int main, int sub)
     {

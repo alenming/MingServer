@@ -1,7 +1,10 @@
 #include "LoginSessionModule.h"
 #include "GateManager.h"
 #include "LoginService.h"
-#include "Protocol.h"
+#include "helper/BufferData.h"
+#include "server/Head.h"
+#include "protocol/MainProtocol.h"
+#include "protocol/LoginProtocol.h"
 
 LoginSessionModule::LoginSessionModule(void)
 {

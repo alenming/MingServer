@@ -2,7 +2,8 @@
 #include "SessionClient.h"
 #include "SessionServer.h"
 #include "NetworkManager.h"
-#include "Protocol.h"
+#include "protocol/MainProtocol.h"
+#include "protocol/LoginProtocol.h"
 
 ClientModule::ClientModule(void)
 {

@@ -1,9 +1,11 @@
 #include "LoginService.h"
 #include "GameUserManager.h"
 #include "GateManager.h"
-#include "helper/BufferTool.h"
 
-#include "Protocol.h"
+#include "helper/BufferData.h"
+#include "server/Head.h"
+#include "protocol/MainProtocol.h"
+#include "protocol/LoginProtocol.h"
 
 using namespace std;
 

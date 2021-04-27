@@ -5,7 +5,7 @@
 	DataModel 中是玩家的各类依赖数据模型, 类似RPG中公会模型,背包模型.卡牌模型
 	UserModel 玩家的各位账号重要数据等
 */
-#include "DataModel/UserModel.h"
+#include "UserModel.h"
 
 #include <vector>
 #include <map>

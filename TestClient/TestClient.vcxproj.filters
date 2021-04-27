@@ -168,9 +168,6 @@
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxSock.cpp">
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClCompile>
-    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPClienter.cpp">
-      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
-    </ClCompile>
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPConnector.cpp">
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClCompile>
@@ -309,6 +306,9 @@
     <ClCompile Include="..\Extern\Tool\Socket\network\WebSocket.cpp">
       <Filter>Classes\Extern\Tool\Socket\network</Filter>
     </ClCompile>
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPClient.cpp">
+      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Classes\TestClient.h">
@@ -396,9 +396,6 @@
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClInclude>
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxSock.h">
-      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPClienter.h">
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClInclude>
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPConnector.h">
@@ -820,6 +817,9 @@
     </ClInclude>
     <ClInclude Include="..\Extern\Tool\Socket\network\WebSocket.h">
       <Filter>Classes\Extern\Tool\Socket\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPClient.h">
+      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -35,9 +35,6 @@
     <Filter Include="Classes\Extern\ServerFrame\data">
       <UniqueIdentifier>{d4a6334a-c3c2-41bd-8f03-815d4525fb33}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Extern\ServerFrame\data\DataModel">
-      <UniqueIdentifier>{43d9b05f-84ee-4a45-80a5-c96c518bf5a5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\Extern\Tool\DBDriver">
       <UniqueIdentifier>{1eb07ad3-c534-4b60-8ba4-ef184e747b9d}</UniqueIdentifier>
     </Filter>
@@ -68,9 +65,6 @@
     <Filter Include="Classes\Extern\Tool\MyJson">
       <UniqueIdentifier>{f3c53fda-20ae-4f95-bccf-acee6394acdf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Extern\Tool\Observer">
-      <UniqueIdentifier>{33255a0b-84f8-4c22-969b-ab7f37f3d10d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\Extern\Tool\Pthread">
       <UniqueIdentifier>{dc000209-ace7-4606-aa3b-73ebaed75f28}</UniqueIdentifier>
     </Filter>
@@ -89,17 +83,11 @@
     <Filter Include="Classes\Extern\Tool\UTFGBK">
       <UniqueIdentifier>{2b39c5bb-e5a9-4f51-89fa-fdb0e5a44ff1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Extern\Tool\Socket">
-      <UniqueIdentifier>{7b525c5c-97b4-4427-abd2-9cae29dced5f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\Extern\Tool\Socket\network">
-      <UniqueIdentifier>{4ce9bf99-f021-4a36-a144-e9dccb8dfd57}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\Extern\Tool\Socket\socket">
-      <UniqueIdentifier>{6b7e9b8d-adcb-409e-b375-ef7e21a00890}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\Extern\Tool\MyJson\json">
       <UniqueIdentifier>{1a9fea44-0cdd-401e-a814-a3fd7c555299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Extern\ServerFrame\protocol">
+      <UniqueIdentifier>{dc431d77-ae27-41fc-996a-e2a303639f0c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -134,9 +122,6 @@
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClInclude>
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxSock.h">
-      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPClienter.h">
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClInclude>
     <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPConnector.h">
@@ -219,9 +204,6 @@
     </ClInclude>
     <ClInclude Include="..\Extern\ServerFrame\data\GameUserManager.h">
       <Filter>Classes\Extern\ServerFrame\data</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\ServerFrame\data\DataModel\UserModel.h">
-      <Filter>Classes\Extern\ServerFrame\data\DataModel</Filter>
     </ClInclude>
     <ClInclude Include="..\Extern\Tool\DBDriver\DBManager.h">
       <Filter>Classes\Extern\Tool\DBDriver</Filter>
@@ -430,9 +412,6 @@
     <ClInclude Include="..\Extern\Tool\MyJson\MyJson.h">
       <Filter>Classes\Extern\Tool\MyJson</Filter>
     </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Observer\Observer.h">
-      <Filter>Classes\Extern\Tool\Observer</Filter>
-    </ClInclude>
     <ClInclude Include="..\Extern\Tool\Pthread\pthread.h">
       <Filter>Classes\Extern\Tool\Pthread</Filter>
     </ClInclude>
@@ -463,57 +442,6 @@
     <ClInclude Include="..\Extern\Tool\UTFGBK\UtfGbk.h">
       <Filter>Classes\Extern\Tool\UTFGBK</Filter>
     </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\AbstractCommunicator.h">
-      <Filter>Classes\Extern\Tool\Socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\Command.h">
-      <Filter>Classes\Extern\Tool\Socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\EnvConfig.h">
-      <Filter>Classes\Extern\Tool\Socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\HttpCommunicator.h">
-      <Filter>Classes\Extern\Tool\Socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\ICommListener.h">
-      <Filter>Classes\Extern\Tool\Socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\SocketCommunicator.h">
-      <Filter>Classes\Extern\Tool\Socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\network\HttpClient.h">
-      <Filter>Classes\Extern\Tool\Socket\network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\network\HttpRequest.h">
-      <Filter>Classes\Extern\Tool\Socket\network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\network\HttpResponse.h">
-      <Filter>Classes\Extern\Tool\Socket\network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\network\SocketIO.h">
-      <Filter>Classes\Extern\Tool\Socket\network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\network\WebSocket.h">
-      <Filter>Classes\Extern\Tool\Socket\network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\socket\ByteBuffer.h">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\socket\message.h">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\socket\MSAutoReleasePool.h">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\socket\NetDef.h">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\socket\SocketClient.h">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Extern\Tool\Socket\socket\Util.h">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClInclude>
     <ClInclude Include="..\Extern\Tool\MyJson\json\autolink.h">
       <Filter>Classes\Extern\Tool\MyJson\json</Filter>
     </ClInclude>
@@ -540,6 +468,21 @@
     </ClInclude>
     <ClInclude Include="..\Extern\Tool\MyJson\json\writer.h">
       <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\protocol\BagProtocol.h">
+      <Filter>Classes\Extern\ServerFrame\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\protocol\LoginProtocol.h">
+      <Filter>Classes\Extern\ServerFrame\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\protocol\MainProtocol.h">
+      <Filter>Classes\Extern\ServerFrame\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\commnication\KxTCPClienter.h">
+      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Extern\ServerFrame\data\UserModel.h">
+      <Filter>Classes\Extern\ServerFrame\data</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -571,9 +514,6 @@
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClCompile>
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxSock.cpp">
-      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPClienter.cpp">
       <Filter>Classes\Extern\ServerFrame\commnication</Filter>
     </ClCompile>
     <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPConnector.cpp">
@@ -626,9 +566,6 @@
     </ClCompile>
     <ClCompile Include="..\Extern\ServerFrame\data\GameUserManager.cpp">
       <Filter>Classes\Extern\ServerFrame\data</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\ServerFrame\data\DataModel\UserModel.cpp">
-      <Filter>Classes\Extern\ServerFrame\data\DataModel</Filter>
     </ClCompile>
     <ClCompile Include="..\Extern\Tool\DBDriver\DBManager.cpp">
       <Filter>Classes\Extern\Tool\DBDriver</Filter>
@@ -693,9 +630,6 @@
     <ClCompile Include="..\Extern\Tool\MyJson\MyJson.cpp">
       <Filter>Classes\Extern\Tool\MyJson</Filter>
     </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Observer\Observer.cpp">
-      <Filter>Classes\Extern\Tool\Observer</Filter>
-    </ClCompile>
     <ClCompile Include="..\Extern\Tool\StringFormat\StringFormat.cpp">
       <Filter>Classes\Extern\Tool\StringFormat</Filter>
     </ClCompile>
@@ -717,36 +651,6 @@
     <ClCompile Include="..\Extern\Tool\UTFGBK\UtfGbk.cpp">
       <Filter>Classes\Extern\Tool\UTFGBK</Filter>
     </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\AbstractCommunicator.cpp">
-      <Filter>Classes\Extern\Tool\Socket</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\HttpCommunicator.cpp">
-      <Filter>Classes\Extern\Tool\Socket</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\SocketCommunicator.cpp">
-      <Filter>Classes\Extern\Tool\Socket</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\network\HttpClient.cpp">
-      <Filter>Classes\Extern\Tool\Socket\network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\network\SocketIO.cpp">
-      <Filter>Classes\Extern\Tool\Socket\network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\network\WebSocket.cpp">
-      <Filter>Classes\Extern\Tool\Socket\network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\socket\ByteBuffer.cpp">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\socket\message.cpp">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\socket\SocketClient.cpp">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Extern\Tool\Socket\socket\Util.cpp">
-      <Filter>Classes\Extern\Tool\Socket\socket</Filter>
-    </ClCompile>
     <ClCompile Include="..\Extern\Tool\MyJson\json\json_reader.cpp">
       <Filter>Classes\Extern\Tool\MyJson\json</Filter>
     </ClCompile>
@@ -755,6 +659,12 @@
     </ClCompile>
     <ClCompile Include="..\Extern\Tool\MyJson\json\json_writer.cpp">
       <Filter>Classes\Extern\Tool\MyJson\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\ServerFrame\commnication\KxTCPClienter.cpp">
+      <Filter>Classes\Extern\ServerFrame\commnication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Extern\ServerFrame\data\UserModel.cpp">
+      <Filter>Classes\Extern\ServerFrame\data</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

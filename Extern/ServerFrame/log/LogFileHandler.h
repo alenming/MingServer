@@ -1,7 +1,7 @@
 #ifndef __KX_LOG_FILE_HANDLER_H__
 #define __KX_LOG_FILE_HANDLER_H__
 
-#include "LogManager.h"
+#include "ILogHandler.h"
 
 class LogFileHandler : public ILogHandler
 {

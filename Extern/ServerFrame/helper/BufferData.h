@@ -10,6 +10,8 @@
 #include <memory.h>
 #include <assert.h>
 
+#include "server/Head.h"
+
 //序列化插入一个值,反序列化在相应的位置读取该值,并判断是否匹配,如果匹配则没有错位, 不匹配输出信息
 //序列化一个值,用来测试匹配
 #define SERIALIZE_MATCH(_buffData_)					\
@@ -109,5 +111,33 @@ class ISerializable
     virtual bool serialize(BufferData& data) = 0;
     virtual bool unserialize(BufferData& data) = 0;
 };
+
+
+inline BufferData* newBufferData(int mainCMD, int subCmd)
+{
+	BufferData* buffer = new BufferData();
+	buffer->init(256);
+	buffer->writeData(0); //Head::length
+	buffer->writeData(MakeCommand(mainCMD, subCmd));
+	buffer->writeData(0); //Head::id
+	return buffer;
+
+	/*
+	char* bu = buffer->getBuffer();
+	Head* head = reinterpret_cast<Head*>(bu);
+	head->length = buffer->getDataLength();
+	int mainCmd = head->MainCommand();
+	int subCmd = head->SubCommand();
+	*/
+}
+
+inline int deleteBufferData(BufferData* buffer)
+{
+	if (NULL != buffer)
+	{
+		delete buffer;
+	}
+	return 0;
+}
 
 #endif

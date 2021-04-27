@@ -43,8 +43,9 @@ void TestClient::destroy()
 bool TestClient::onServerInit()
 {
 
-	LogManager::getInstance()->setShowTime(true);
-	LogManager::getInstance()->setShowDate(true);
+	LogManager::getInstance()->setShowTime(false);
+	LogManager::getInstance()->setShowDate(false);
+	LogManager::getInstance()->setShowFunc(false);
 	LogManager::getInstance()->addHandler(1, new LogConsoleHandler());
 	LogFileHandler* pFileHandle = new LogFileHandler();
 	pFileHandle->setFilePath("../bin/");
