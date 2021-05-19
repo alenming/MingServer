@@ -2,8 +2,11 @@
 #include "TestClient.h"
 #include "GameNetworkNode.h"
 
-#include "helper/BufferTool.h"
-#include "server/Protocol.h"
+#include "helper/BufferData.h"
+#include "protocol/MainProtocol.h"
+#include "protocol/LoginProtocol.h"
+
+
 #include "log/LogManager.h"
 #include "log/LogFileHandler.h"
 #include "log/LogConsoleHandler.h"
@@ -56,7 +59,7 @@ bool TestClient::onServerInit()
 
 	m_ServerCon = new ConnectServerConf();
 	m_ServerCon->serverGroup = 1;
-	m_ServerCon->host = "127.0.0.1";//"103.44.145.245"; //"a635459675.55555.io";// 
+	m_ServerCon->host = "121.5.104.175";//"103.44.145.245"; //"a635459675.55555.io";// 
 	m_ServerCon->port = 8888;// 25173;
 
 #if KX_PLATFORM_WIN32 != KX_TARGET_PLATFORM

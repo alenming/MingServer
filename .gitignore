@@ -15,3 +15,5 @@ bin/ServerFrame.lib
 .svn/wc.db-journal
 .svn/wc.db
 *.svn-base
+*.vcxproj
+*.filters
