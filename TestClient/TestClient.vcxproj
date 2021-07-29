@@ -95,6 +95,7 @@
     <ClCompile Include="Classes\GameLogic.cpp" />
     <ClCompile Include="Classes\GameModule.cpp" />
     <ClCompile Include="Classes\GameNetworkNode.cpp" />
+    <ClCompile Include="Classes\HuInfo.cpp" />
     <ClCompile Include="Classes\Main.cpp" />
     <ClCompile Include="Classes\TestClient.cpp" />
   </ItemGroup>
@@ -134,9 +135,11 @@
     <ClInclude Include="..\Extern\ServerFrame\server\KxBaseServer.h" />
     <ClInclude Include="..\Extern\ServerFrame\server\Protocol.h" />
     <ClInclude Include="..\Extern\ServerFrame\server\ServerConfig.h" />
+    <ClInclude Include="Classes\cintool.h" />
     <ClInclude Include="Classes\GameLogic.h" />
     <ClInclude Include="Classes\GameModule.h" />
     <ClInclude Include="Classes\GameNetworkNode.h" />
+    <ClInclude Include="Classes\HuInfo.h" />
     <ClInclude Include="Classes\TestClient.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
