@@ -15,6 +15,9 @@
 */
 //////////////////////////////////////////////////////////////////////////
 
+#define FOR_I(count) for(BYTE i = 0; i < count; ++i)
+#define FOR_J(count) for(BYTE j = 0; j < count; ++j)
+#define FOR_K(count) for(BYTE k = 0; k < count; ++k)
 //扑克类型
 #define FTK_ERROR					0x00									//错误类型
 
@@ -46,7 +49,7 @@
 
 #define	FTK_BIG_KING				0x4F									//大王
 #define	FTK_LITTLE_KING				0x4E									//小王
-
+#define MAX_HAND_COUNT				8
 
 
 //游戏逻辑类
@@ -96,11 +99,15 @@ public:
 
 	int SwitchToCardValue(int cbCardData);
 	void SwitchToCardValue(std::vector<int>&  vecCard, int cbCardIndex[]);
-	void SwitchToCardValue(std::vector<int>&  vecCard, std::vector<int>&  vecCardIndex);
+	void SwitchToCardValue(std::vector<BYTE>&resVec, std::vector<BYTE>& oldVec);
+	bool AnalyseHu(std::vector<BYTE>& handCard,BYTE weaveCount);
+	bool AnalyseJiangCard(std::vector<BYTE>& handCard, BYTE index);
+	bool AnalysePerutCard(std::vector<BYTE>& handCard);
 	//保存日志
 	void WriteLog(char * szFormat, ...);
 	void WriteHandCard(std::string heard, const int cbCardData[], bool isEnter = true);
 	void WriteHandCard(int cbCardData[]);
+	bool IsDuiDuiHu(std::vector<BYTE>& handCard,BYTE weaveCount, BYTE curCard);
 	//设置房间桌子
 	void SetServer(int server_id, int table_id);
 	//容器中的值是否相等
