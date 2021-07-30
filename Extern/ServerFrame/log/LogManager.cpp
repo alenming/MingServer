@@ -220,6 +220,7 @@ void LogManager::updateFormat(int level, const char* log, const char* file, cons
     }
 
     m_StringFormat += "	";
+	m_StringFormat = "";
     m_StringFormat += log;
 }
 

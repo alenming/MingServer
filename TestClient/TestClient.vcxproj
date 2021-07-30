@@ -95,7 +95,6 @@
     <ClCompile Include="Classes\GameLogic.cpp" />
     <ClCompile Include="Classes\GameModule.cpp" />
     <ClCompile Include="Classes\GameNetworkNode.cpp" />
-    <ClCompile Include="Classes\HuInfo.cpp" />
     <ClCompile Include="Classes\Main.cpp" />
     <ClCompile Include="Classes\TestClient.cpp" />
   </ItemGroup>

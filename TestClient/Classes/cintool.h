@@ -89,23 +89,28 @@ void cal(std::string Document)
 {
 	std::string data;
 
-	int DocStep = Document.find_first_of(' ', 0);
+	int DocStep = Document.find_first_of('\t', 0);
 
 	std::string head = Document.substr(0, DocStep);
+	if (head.length() != 6)
+		return;
 	std::string CurLine = Document.substr(DocStep+1, Document.size());
-	std::vector<std::string> out;
-	out.clear();
-	if (SplitStrToVector(CurLine, ' ', out))
-	{
-		for (auto i = out.begin(); i != out.end(); ++i)
-		{
-			if ((*i).length() == 12)
-			{
-				std::string data = head + " "+*i;
-				KX_LOGDEBUG(data.c_str());
-			}
-		}
-	}
+
+	data = head + "\t"+ CurLine;
+	KX_LOGDEBUG(data.c_str());
+//	std::vector<std::string> out;
+//	out.clear();
+//	if (SplitStrToVector(CurLine, '\t', out))
+//	{
+//		for (auto i = out.begin(); i != out.end(); ++i)
+//		{
+//			if ((*i).length() == 6)
+//			{
+//				std::string data = *i + "\t"+head;
+//				KX_LOGDEBUG(data.c_str());
+//			}
+//		}
+//	}
 }
 //合并同类项
 void cal1(std::string Document, std::map<string,string>& mapData)
