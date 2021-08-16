@@ -7,7 +7,7 @@
 #include <string>
 #include <Windows.h>
 
-#define MAX_INDEX 54
+#define MAX_INDEX 13
 #pragma once
 //////////////////////////////////////////////////////////////////////////
 /*
@@ -103,6 +103,8 @@ public:
 	bool AnalyseHu(std::vector<BYTE>& handCard,BYTE weaveCount);
 	bool AnalyseJiangCard(std::vector<BYTE>& handCard, BYTE index);
 	bool AnalysePerutCard(std::vector<BYTE>& handCard);
+	bool CheckCanContinuity(int const CardIndex[MAX_INDEX], int GhostCount);
+	bool CheckCanHu(int const HandCard[MAX_INDEX], int HandCardSize, int GhostCount);
 	//保存日志
 	void WriteLog(char * szFormat, ...);
 	void WriteHandCard(std::string heard, const int cbCardData[], bool isEnter = true);
@@ -125,7 +127,7 @@ public:
 	};
 public:
 	//变量定义
-	static const int						m_bCardListData[8*MAX_INDEX];				//扑克数据
+	static const int						m_bCardListData[54];				//扑克数据
 	int										m_cbtable_id;						//桌子id
 	int										m_cbserver_id;						//房间id
 };
